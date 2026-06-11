@@ -1,10 +1,3 @@
-"""
-Faz streaming do tar.gz do SKU-110K (12.2GB) e extrai apenas as primeiras N
-imagens .jpg, sem descarregar o ficheiro completo.
-
-Uso:
-    python scripts/download_sku110k_subset.py --n 600 --out data/images/raw_sku110k
-"""
 import argparse
 import io
 import os

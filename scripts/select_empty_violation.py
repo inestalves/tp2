@@ -1,26 +1,3 @@
-"""
-Seleciona, por heuristica de "desordem visual" (sem chamadas LLM, devido ao
-limite diario de quota da API gratuita do Gemini), imagens reais do SKU-110K
-para completar as categorias "empty" (prateleira vazia/pouco preenchida) e
-"planogram_violation" (prateleira desorganizada/com produtos fora de posicao).
-
-Heuristica (a mesma de categorize_sku110k.py / scan_pool_for_categories.py):
-    score = 0.7 * std(deteccao de contornos em escala de cinzentos 256x256)
-          + 0.3 * std(imagem RGB 256x256)
-
-Imagens com score muito baixo -> pouca variacao visual -> candidatas a
-"prateleira vazia" (poucos produtos/etiquetas, grandes areas uniformes).
-Imagens com score muito alto -> muita variacao/caos visual -> candidatas a
-"violacao de planograma" (produtos misturados, desalinhados, etiquetas em
-falta, etc.).
-
-As poucas imagens ja confirmadas por LLM (estrategia B) em data/images/empty/
-e data/images/planogram_violation/ sao mantidas; este script apenas completa
-ate ao minimo (100 cada) com novas imagens reais selecionadas por heuristica.
-
-Uso:
-    python scripts/select_empty_violation.py --target-empty 100 --target-violation 100
-"""
 import argparse
 import os
 import shutil
@@ -86,7 +63,7 @@ def main():
     need_empty = args.target_empty - len(existing_empty)
     need_violation = args.target_violation - len(existing_violation)
 
-    # candidatos a "vazia": scores mais baixos, ainda nao usados
+    # candidatos "vazia": scores mais baixos, ainda nao usados
     empty_added = 0
     for pool_dir, f, score in scored:
         if empty_added >= need_empty:
@@ -97,7 +74,7 @@ def main():
         existing_empty.add(f)
         empty_added += 1
 
-    # candidatos a "violacao": scores mais altos, ainda nao usados
+    # candidatos "violacao": scores mais altos, ainda nao usados
     violation_added = 0
     for pool_dir, f, score in reversed(scored):
         if violation_added >= need_violation:
@@ -108,9 +85,9 @@ def main():
         existing_violation.add(f)
         violation_added += 1
 
-    print("\n=== RESUMO ===")
-    print(f"empty: +{empty_added} -> total {len(existing_empty)}/{args.target_empty}")
-    print(f"planogram_violation: +{violation_added} -> total {len(existing_violation)}/{args.target_violation}")
+    print("\nRESUMO")
+    print(f"empty: +{empty_added} - total {len(existing_empty)}/{args.target_empty}")
+    print(f"planogram_violation: +{violation_added} - total {len(existing_violation)}/{args.target_violation}")
 
 
 if __name__ == "__main__":

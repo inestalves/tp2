@@ -1,16 +1,3 @@
-"""
-
-Heurística: "desordem" = densidade de arestas (Laplacian-like via PIL FIND_EDGES)
-combinada com desvio-padrão de cor. Imagens com prateleiras muito cheias e
-caóticas tendem a ter scores altos; prateleiras arrumadas e uniformes, scores baixos.
-
-Esta categorização automática é um PONTO DE PARTIDA - o aluno deve fazer uma
-revisão manual rápida antes da entrega final (mover algumas imagens entre pastas
-se a heurística errar obviamente).
-
-Uso:
-    python scripts/categorize_sku110k.py
-"""
 import os
 import shutil
 
@@ -77,7 +64,7 @@ def main():
         "normal": normal,
         "dirty": dirty,
         "ambiguous": ambiguous,
-        "leftover_for_synthetic": leftover,
+        "leftover": leftover,
     }
 
     for bucket_name, items in buckets.items():

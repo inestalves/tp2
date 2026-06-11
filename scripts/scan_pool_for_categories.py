@@ -1,22 +1,3 @@
-"""
-Procura, no pool de candidatos (data/images/pool_candidates/, imagens reais
-do SKU-110K ainda nao usadas), imagens que correspondam as categorias
-"prateleira vazia" e "violacao de planograma", usando:
-
-1. Heuristica de "desordem visual" (a mesma de categorize_sku110k.py) para
-   pre-ordenar o pool: imagens muito uniformes -> candidatas a "vazia";
-   imagens muito caoticas -> candidatas a "violacao".
-2. shelf_inspector.py (Gemini, estrategia B) para confirmar via analise real:
-   - "vazia": issue do tipo empty_shelf com affected_area_pct >= 0.08
-   - "violacao": issue do tipo damaged|misaligned|wrong_product|label_missing
-
-As imagens confirmadas sao copiadas para data/images/empty/ e
-data/images/planogram_violation/ (ate atingir os alvos), e os inspection
-records sao guardados em data/inspections/_scan/ para referencia.
-
-Uso:
-    python scripts/scan_pool_for_categories.py --target-empty 100 --target-violation 100 --max-scan 250
-"""
 import argparse
 import json
 import os
@@ -27,9 +8,9 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from src.shelf_inspector import analyze_image, QuotaManager  # noqa: E402
-from google import genai  # noqa: E402
-from dotenv import load_dotenv  # noqa: E402
+from src.shelf_inspector import analyze_image, QuotaManager
+from google import genai
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -146,7 +127,7 @@ def main():
     print(f"\nA procurar 'violacao' (alvo={args.target_violation}, ja temos {found_violation})...")
     found_violation, scanned_violation = scan(violation_pool, args.target_violation, found_violation, VIOLATION_DIR, is_violation_match, "violacao")
 
-    print("\n=== RESUMO ===")
+    print("\nRESUMO")
     print(f"vazia: {found_empty}/{args.target_empty} (scanned {scanned_empty})")
     print(f"violacao: {found_violation}/{args.target_violation} (scanned {scanned_violation})")
     print(f"Quota diaria restante: {quota.daily_remaining()}")
