@@ -1,0 +1,21 @@
+{
+  "natural_language": "texto original da regra, tal como fornecido pelo utilizador",
+  "description": "reformulacao clara e inequivoca da regra em portugues formal",
+  "conditions": {
+    "zone_filter": "lista de zone_id (ex: ['Z_S1','Z_S3']) a que a regra se aplica, ou null se se aplicar a todas as zonas",
+    "time_filter": "objeto {'hours_start': int, 'hours_end': int} (horas em UTC, 0-23) se a regra so se aplicar num intervalo horario, ou null caso contrario",
+    "issue_types": "lista de tipos de issue (empty_shelf | wrong_product | damaged | misaligned | label_missing | other) que ativam a regra, ou null se a regra nao depender de issues especificos",
+    "severity_threshold": "low | medium | high - severidade minima dos issues em issue_types para a regra disparar, ou null se nao aplicavel",
+    "fill_rate_threshold": "numero entre 0.0 e 1.0 - a regra dispara se shelf_fill_rate for inferior a este valor, ou null se nao aplicavel",
+    "location_filter": "bottom | middle | top | any - restringe issue_types a uma localizacao da prateleira, ou null se nao aplicavel"
+  },
+  "action": {
+    "alert_level": "info | warning | critical - nivel de alerta a emitir quando a regra dispara",
+    "notification_message": "mensagem de notificacao (pode usar {zone_id}, {issue_type}, {severity}, {shelf_fill_rate} como placeholders)"
+  },
+  "validation": {
+    "is_valid": "true se a descricao foi suficientemente clara para gerar uma regra fiavel sem ambiguidades, false caso contrario",
+    "ambiguities": "lista de strings descrevendo aspetos ambiguos ou por esclarecer da descricao original (lista vazia se is_valid=true)",
+    "assumptions": "lista de strings descrevendo suposicoes feitas para preencher campos nao especificados explicitamente pelo utilizador (pode ser nao-vazia mesmo se is_valid=true)"
+  }
+}

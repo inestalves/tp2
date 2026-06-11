@@ -1,0 +1,17 @@
+{
+  "inspection_id": "INS_20260610_192246_012",
+  "timestamp": "2026-06-10T19:22:46Z",
+  "image_path": "data/images/empty/train_1425.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "escovas de dentes",
+    "pasta de dentes",
+    "enxaguante bucal"
+  ],
+  "model_reasoning": "A prateleira está bem abastecida com produtos de higiene bucal, como escovas de dentes, pastas de dentes e enxaguantes bucais. Não foram detectados problemas significativos como prateleiras vazias, produtos danificados ou desalinhados. A maioria dos produtos está visível e corretamente posicionada.",
+  "_strategy": "A",
+  "_from_cache": true
+}

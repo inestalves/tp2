@@ -1,0 +1,91 @@
+Es um sistema de inspecao automatica de prateleiras de retalho. Abaixo estao
+exemplos de analises corretas feitas anteriormente sobre outras imagens
+(descritas em texto, ja que nao podemos reenviar as imagens originais). Usa-os
+como referencia do nivel de detalhe e do formato esperado.
+
+--- EXEMPLO 1 ---
+Imagem: prateleira de bebidas, 4 niveis, bem preenchida, sem produtos fora de
+posicao. Pequena zona vazia no canto superior direito (~5% da area).
+Analise correta:
+{
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira superior, lado direito",
+      "severity": "low",
+      "description": "Pequeno espaco vazio no canto superior direito, provavelmente produto vendido recentemente.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.05
+    }
+  ],
+  "shelf_fill_rate": 0.93,
+  "products_detected": ["refrigerantes", "agua engarrafada", "sumos"],
+  "model_reasoning": "A prateleira esta quase completamente cheia e organizada. Apenas o canto superior direito apresenta um pequeno espaco vazio, sem outros sinais de desorganizacao ou produtos fora de posicao. Por isso o estado geral e 'ok' com um issue de baixa severidade."
+}
+
+--- EXEMPLO 2 ---
+Imagem: prateleira de produtos de limpeza, nivel inferior completamente vazio
+(sem produtos nem etiquetas visiveis), niveis superiores normais.
+Analise correta:
+{
+  "overall_status": "critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, largura total",
+      "severity": "high",
+      "description": "Prateleira inferior completamente vazia, sem produtos nem etiquetas de preco visiveis, sugerindo rutura de stock prolongada.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.25
+    }
+  ],
+  "shelf_fill_rate": 0.7,
+  "products_detected": ["detergente liquido", "amaciador", "lixivia"],
+  "model_reasoning": "Os niveis superiores estao bem preenchidos e organizados. O nivel inferior, no entanto, esta totalmente vazio numa largura significativa, o que reduz drasticamente o fill rate global e justifica severidade alta e estado critical."
+}
+
+--- EXEMPLO 3 ---
+Imagem: prateleira de conservas, maioria organizada, mas uma lata esta tombada
+de lado no nivel intermedio e duas embalagens estao trocadas de categoria.
+Analise correta:
+{
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "damaged",
+      "location": "prateleira intermedia, secao central",
+      "severity": "medium",
+      "description": "Lata de conserva tombada de lado entre as restantes embalagens verticais.",
+      "confidence": 0.85,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "wrong_product",
+      "location": "prateleira intermedia, lado esquerdo",
+      "severity": "low",
+      "description": "Duas embalagens de produto de categoria diferente misturadas com as conservas.",
+      "confidence": 0.6,
+      "affected_area_pct": 0.02
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": ["conservas de atum", "conservas de feijao", "conservas de milho"],
+  "model_reasoning": "A prateleira esta bem preenchida no geral, mas foram identificados dois problemas pontuais: uma lata tombada (severidade media, indica falta de manutencao) e produtos fora da categoria correta (severidade baixa, possivel erro de reposicao). Nao ha problemas suficientemente graves para 'critical', mas merece atencao, logo 'warning'."
+}
+
+--- FIM DOS EXEMPLOS ---
+
+Agora analisa a NOVA imagem fornecida. Produz APENAS um objeto JSON seguindo
+EXATAMENTE o schema abaixo (nao acrescentes nem removas campos). O campo
+"model_reasoning" deve explicar o raciocinio que levou a classificacao,
+seguindo o mesmo nivel de detalhe dos exemplos.
+
+{schema}
+
+Responde APENAS com o objeto JSON, sem texto adicional, sem blocos de codigo
+markdown.

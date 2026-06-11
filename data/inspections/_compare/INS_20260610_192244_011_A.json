@@ -1,0 +1,24 @@
+{
+  "inspection_id": "INS_20260610_192244_011",
+  "timestamp": "2026-06-10T19:22:44Z",
+  "image_path": "data/images/empty/train_1145.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "creme para assaduras",
+    "loção para bebé",
+    "shampoo para bebé",
+    "banho para bebé",
+    "óleo para bebé",
+    "lenços umedecidos",
+    "fraldas",
+    "algodão",
+    "brinquedos para bebé",
+    "gel para dentição"
+  ],
+  "model_reasoning": "A prateleira está bem abastecida com uma variedade de produtos para bebé. Não foram detetados problemas significativos como prateleiras vazias, produtos errados, danificados, desalinhados ou etiquetas em falta. A taxa de preenchimento da prateleira é alta.",
+  "_strategy": "A",
+  "_from_cache": true
+}

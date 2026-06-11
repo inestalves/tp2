@@ -1,0 +1,58 @@
+{
+  "inspection_id": "INS_20260610_184329_009",
+  "timestamp": "2026-06-10T18:43:29Z",
+  "image_path": "data/images/pool_candidates\\train_4435.jpg",
+  "zone_id": "Z_SCAN",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Prateleira inferior, lado direito (display de Balea Frische Sohlen)",
+      "severity": "medium",
+      "description": "Várias caixas de Balea Frische Sohlen estão em falta, deixando espaços vazios significativos no expositor dedicado a este produto.",
+      "confidence": 0.95,
+      "affected_area_pct": 50.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "other",
+      "location": "Prateleira Nível 4, lado direito, num expositor de metal adjacente",
+      "severity": "low",
+      "description": "Garrafas grandes de um produto que parece ser amaciador de roupa (Lenor) estão num expositor de metal imediatamente ao lado da secção de 'Fußpflege', o que é inconsistente com a categoria de produtos da prateleira principal.",
+      "confidence": 0.85,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "Prateleira Nível 5, lado esquerdo (Balea Samt Schuhpads)",
+      "severity": "low",
+      "description": "Uma caixa de Balea Samt Schuhpads está ligeiramente desalinhada em relação às outras.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.5
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Foot rasps",
+    "Foot files",
+    "Insoles",
+    "Gel pads",
+    "Electronic foot files",
+    "Nail care systems",
+    "Foot creams",
+    "Foot balms",
+    "Foot sprays",
+    "Foot deodorants",
+    "Corn plasters",
+    "Blister plasters",
+    "Toe separators",
+    "Compression stockings",
+    "Ingrown toenail solutions",
+    "Nail clippers",
+    "Scissors"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma secção de prateleiras de retalho dedicada a produtos de 'Fußpflege' (cuidado dos pés). Existem cinco níveis de prateleiras principais visíveis, mais uma área de exposição na base. Os produtos predominantes são de marcas como Scholl, Balea, Credo, Sixtus, Compeed, Emcur, Weleda, alverde e SOS, incluindo limas para pés, palmilhas, cremes, bálsamos, sprays, produtos para unhas e soluções para problemas específicos dos pés. As prateleiras são brancas e o chão tem um padrão salpicado cinzento e azul.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (Nível 1): Bem abastecida e organizada com limas para pés (Credo, Balea) e palmilhas Scholl Gel Activ e Balea Komfort Sohlen.\n   - Prateleira Nível 2: Bem abastecida e organizada com produtos Scholl Velvet Smooth (limas eletrónicas e sistemas de cuidado de unhas).\n   - Prateleira Nível 3: Bem abastecida e organizada com cremes e soluções Scholl para os pés, separadores de dedos, cortadores de unhas Balea e Credo.\n   - Prateleira Nível 4: Bem abastecida e organizada com sprays/loções Sixtus, bálsamos para os pés e meias de compressão Scholl Light Legs. Um expositor de metal adjacente à direita contém garrafas grandes que parecem ser amaciador de roupa (Lenor), fora da categoria de cuidado dos pés.\n   - Prateleira Nível 5: Bem abastecida e organizada com almofadas para sapatos (Balea, Scholl), pensos para bolhas e calos (Compeed) e produtos SOS para calos e verrugas.\n   - Nível de Base/Chão: A secção esquerda e central está bem abastecida com produtos Balea para os pés (banhos, peelings, loções, desodorizantes). A secção direita, dedicada às palmilhas Balea Frische Sohlen, apresenta vários espaços vazios.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Anomalia 1 (empty_shelf): Na prateleira inferior, lado direito, o display de Balea Frische Sohlen tem aproximadamente 50% da sua área vazia devido à falta de produto. Severidade: medium.\n   - Anomalia 2 (other): Na prateleira Nível 4, lado direito, num expositor de metal adjacente, há garrafas de um produto (aparentemente Lenor) que não pertence à categoria de cuidado dos pés. Severidade: low. Área afetada: ~5% do expositor adjacente.\n   - Anomalia 3 (misaligned): Na prateleira Nível 5, lado esquerdo, uma caixa de Balea Samt Schuhpads está ligeiramente desalinhada. Severidade: low. Área afetada: <1%.\n4. CLASSIFICACAO FINAL: O overall_status é 'warning' devido à presença de uma anomalia de 'empty_shelf' de severidade média e duas anomalias de severidade baixa ('other' e 'misaligned'). O shelf_fill_rate global é estimado em 0.90, refletindo que a maioria das prateleiras está bem abastecida, mas há uma área notavelmente vazia na parte inferior.",
+  "_strategy": "B"
+}

@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260610_192047_001",
+  "timestamp": "2026-06-10T19:20:47Z",
+  "image_path": "data/images/normal/train_1002.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.85,
+  "products_detected": [
+    "antialergicos",
+    "analgesicos",
+    "descongestionantes nasais",
+    "xaropes",
+    "medicamentos de venda livre"
+  ],
+  "model_reasoning": "A prateleira está bem abastecida com uma variedade de produtos farmacêuticos, principalmente antialergicos e analgésicos. Não foram detectados problemas significativos como prateleiras vazias, produtos incorretos, danos ou desalinhamento. A taxa de preenchimento da prateleira é alta.",
+  "_strategy": "A",
+  "_from_cache": true
+}

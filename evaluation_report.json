@@ -1,0 +1,242 @@
+{
+  "shelf_inspector": {
+    "strategy": "B",
+    "n_images": 15,
+    "n_images_with_ground_truth": 15,
+    "api_success_rate": 0.9333333333333333,
+    "json_parse_rate": 1.0,
+    "issue_detection_rate": 0.16666666666666666,
+    "false_positive_rate": 0.75,
+    "severity_accuracy": 1.0,
+    "hallucination_rate": 0.2,
+    "per_image": [
+      {
+        "image": "test_images\\train_1002.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1007.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          "empty_shelf"
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1029.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [
+          "misaligned",
+          "other"
+        ],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1041.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_106.jpg",
+        "gt_status": "warning",
+        "pred_status": "warning",
+        "gt_issues": [
+          "wrong_product",
+          "empty_shelf"
+        ],
+        "pred_issues": [
+          "empty_shelf"
+        ],
+        "fallback": false,
+        "from_cache": false
+      },
+      {
+        "image": "test_images\\train_1066.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1098.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_111.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          "wrong_product"
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": false
+      },
+      {
+        "image": "test_images\\train_1145.jpg",
+        "gt_status": "ok",
+        "pred_status": "warning",
+        "gt_issues": [],
+        "pred_issues": [
+          "empty_shelf"
+        ],
+        "fallback": false,
+        "from_cache": false
+      },
+      {
+        "image": "test_images\\train_1291.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          "empty_shelf"
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1319.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1346.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": false
+      },
+      {
+        "image": "test_images\\train_1378.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "test_images\\train_1425.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "test_images\\train_1517.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          "damaged"
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      }
+    ]
+  },
+  "rule_engine": {
+    "n_active_rules": 3,
+    "n_total_rules": 4,
+    "n_records_evaluated": 32,
+    "n_records_with_match": 1,
+    "match_rate": 0.03125,
+    "matches_per_rule": {
+      "RULE_001": {
+        "description": "O sistema deve emitir um alerta sempre que a taxa de preenchimento de prateleira (shelf_fill_rate) de qualquer zona for inferior a 0.7 (70%).",
+        "n_matches": 1
+      },
+      "RULE_003": {
+        "description": "O sistema deve emitir um alerta quando for detetado pelo menos um issue do tipo 'produto fora de posicao' (wrong_product) com severidade media ou superior em qualquer zona.",
+        "n_matches": 1
+      },
+      "RULE_004": {
+        "description": "O sistema deve emitir um alerta critico sempre que for detetado um issue do tipo 'prateleira vazia' (empty_shelf) com severidade alta em qualquer zona.",
+        "n_matches": 1
+      }
+    },
+    "rule_parse_rate": 1.0,
+    "rule_correctness": 1.0,
+    "n_invalid_rules": 1,
+    "ambiguity_detection_rate": 1.0
+  },
+  "rag_memory": {
+    "recall_at_3": {
+      "document": 0.26666666666666666,
+      "issue": 0.6,
+      "hybrid": 0.26666666666666666,
+      "_meta": {
+        "k": 3,
+        "n_records": 32
+      }
+    },
+    "faithfulness": 1.0,
+    "answer_relevance": 1.0,
+    "n_queries_evaluated": 4,
+    "per_query": [
+      {
+        "query": "Quando foi a ultima vez que a zona Z_S1 teve problemas de prateleira vazia?",
+        "answer": "De acordo com os registos fornecidos, a última vez que a zona Z_S1 teve problemas de prateleira vazia foi em 2026-06-10. Este problema foi detetado na inspeção INS_TEST_001, onde se verificou um problema do tipo 'empty_shelf' com severidade 'high', afetando 30% da área da prateleira.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
+      },
+      {
+        "query": "Que zonas tiveram mais issues de planograma nas ultimas 2 semanas?",
+        "answer": "Nas últimas 2 semanas, a zona Z_SCAN teve mais issues de planograma. Segundo a inspeção INS_20260610_184119_001, em 2026-06-10, a zona Z_SCAN apresentou problemas de 'empty_shelf' cobrindo 5% e 10% da área. Em comparação, a zona Z_S2, na inspeção INS_20260610_183302_001 da mesma data, teve um problema de 'empty_shelf' de 3% da área. A zona Z_CMP, na inspeção INS_20260610_193118_036, não registou problemas de planograma.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
+      },
+      {
+        "query": "Existe algum padrao nos problemas detetados as sextas-feiras a tarde?",
+        "answer": "Com base nos registos de histórico fornecidos, não é possível identificar um padrão nos problemas detetados às sextas-feiras à tarde. Todas as inspeções recuperadas, incluindo INS_20260610_183302_001, INS_20260610_192326_018 e INS_20260610_184207_004, ocorreram na quarta-feira, 10 de junho de 2026. A informação disponível não contém dados de inspeções realizadas às sextas-feiras à tarde para analisar padrões.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
+      },
+      {
+        "query": "Que regras foram mais frequentemente disparadas este mes?",
+        "answer": "Foram encontrados 3 registo(s) relevante(s) no historico de inspecoes para a pergunta \"Que regras foram mais frequentemente disparadas este mes?\":\n- Inspecao INS_20260610_192233_007 (2026-06-10, zona Z_CMP, estado ok): Inspecao da zona Z_CMP com estado geral 'ok'. Taxa de preenchimento da prateleira: 95%. Nenhum problema detetado nesta inspecao. Produtos identificados: cuidados com os pés, meias de compressão, pensos, cremes, sprays. A\n- Inspecao INS_20260610_192326_018 (2026-06-10, zona Z_CMP, estado ok): Inspecao da zona Z_CMP com estado geral 'ok'. Taxa de preenchimento da prateleira: 90%. Nenhum problema detetado nesta inspecao. Produtos identificados: analgesics, cold and flu remedies, skin care, feminine hygiene, ant\n- Inspecao INS_20260610_184119_001 (2026-06-10, zona Z_SCAN, estado warning): Inspecao da zona Z_SCAN com estado geral 'warning'. Taxa de preenchimento da prateleira: 88%. Problemas detetados: empty_shelf (severidade low, 5% da area); empty_shelf (severidade low, 10% da area). Produtos identificad",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
+      }
+    ]
+  },
+  "llm_judge": null
+}

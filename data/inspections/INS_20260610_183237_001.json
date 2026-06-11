@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260610_183237_001",
+  "timestamp": "2026-06-10T18:32:37Z",
+  "image_path": "data/images/normal/train_1002.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Allergy & Sinus Relief",
+    "Cold & Flu Medication",
+    "Pain Relief",
+    "Heartburn Medication",
+    "Nasal Sprays"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho de uma secção de farmácia ou medicamentos de venda livre. Existem 6 níveis de prateleiras visíveis com produtos, além de um painel de exibição grande no topo. Os produtos predominantes são medicamentos para alergias, constipações/gripes, alívio da dor e sprays nasais. Marcas como Afrin, NyQuil, Flonase, Nasacort, Claritin, Xyzal, Zyrtec, Allegra, Mucinex, Sinex, Advil, Benadryl e Prilosec são visíveis.\n2. ANALISE ZONA A ZONA: Todas as 6 prateleiras visíveis, da superior à inferior, e em todas as secções (esquerda, centro, direita), apresentam um estado de organização e preenchimento muito bom. Não há prateleiras vazias ou parcialmente vazias de forma significativa. Os produtos estão bem alinhados e virados para a frente. As etiquetas de preço estão presentes e visíveis para a maioria dos produtos. O painel de exibição superior também está completo e organizado. Na prateleira superior direita, há alguns artigos de higiene pessoal (esponjas de banho) pendurados, o que é uma escolha de merchandising e não uma anomalia da prateleira de medicamentos.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Não há prateleiras vazias (empty_shelf), produtos fora do lugar (wrong_product), produtos visivelmente danificados (damaged), desalinhamentos graves (misaligned) ou etiquetas em falta (label_missing). A organização geral é excelente.\n4. CLASSIFICACAO FINAL: Com base na análise detalhada, o overall_status é 'ok', pois não foram encontrados problemas relevantes ou anomalias de severidade baixa, média ou alta. O shelf_fill_rate global é estimado em 0.95, indicando que a grande maioria do espaço da prateleira está ocupada por produtos de forma organizada.",
+  "_strategy": "B",
+  "_from_cache": true
+}

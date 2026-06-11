@@ -1,0 +1,27 @@
+{
+  "inspection_id": "INS_20260610_183302_001",
+  "timestamp": "2026-06-10T18:33:02Z",
+  "image_path": "data/images/dirty/train_1291.jpg",
+  "zone_id": "Z_S2",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "segunda prateleira, lado esquerdo",
+      "severity": "low",
+      "description": "Pequeno espaco vazio detetado na segunda prateleira, entre as caixas de Tylenol 8HR e as garrafas de Acetaminophen, indicando uma ligeira falta de stock ou desalinhamento.",
+      "confidence": 0.95,
+      "affected_area_pct": 0.03
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "analgésicos",
+    "medicamentos para dor e febre",
+    "medicamentos para artrite",
+    "medicamentos para dor noturna"
+  ],
+  "model_reasoning": "A maioria das prateleiras esta bem abastecida e organizada com uma variedade de analgésicos e medicamentos para dor. No entanto, foi identificado um pequeno espaco vazio na segunda prateleira, o que sugere uma ligeira falta de stock para um produto específico. O preenchimento geral da prateleira é alto.",
+  "_strategy": "A"
+}

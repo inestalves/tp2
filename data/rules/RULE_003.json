@@ -1,0 +1,27 @@
+{
+  "rule_id": "RULE_003",
+  "created_at": "2026-06-10T20:15:20Z",
+  "natural_language": "Alertar quando houver muitos produtos fora de posicao numa prateleira (mais de 20% da area, severidade media ou superior)",
+  "description": "O sistema deve emitir um alerta quando for detetado pelo menos um issue do tipo 'produto fora de posicao' (wrong_product) com severidade media ou superior em qualquer zona.",
+  "conditions": {
+    "zone_filter": null,
+    "time_filter": null,
+    "issue_types": [
+      "wrong_product"
+    ],
+    "severity_threshold": "medium",
+    "fill_rate_threshold": null,
+    "location_filter": null
+  },
+  "action": {
+    "alert_level": "warning",
+    "notification_message": "Alerta: produtos fora de posicao detetados na zona {zone_id} com severidade {severity}."
+  },
+  "validation": {
+    "is_valid": true,
+    "ambiguities": [],
+    "assumptions": [
+      "O limiar original de 'mais de 20% da area afetada' nao e representavel no schema de condicoes definido (que nao inclui affected_area_pct); usa-se apenas o filtro de severidade >= 'medium' como aproximacao."
+    ]
+  }
+}

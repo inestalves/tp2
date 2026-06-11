@@ -1,0 +1,18 @@
+{
+  "inspection_id": "INS_20260610_192313_016",
+  "timestamp": "2026-06-10T19:23:13Z",
+  "image_path": "data/images/normal/train_1002.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "medicamentos para alergia",
+    "analgesicos",
+    "xaropes",
+    "sprays nasais"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de supermercado com uma variedade de medicamentos para alergia e outros produtos de venda livre. Existem aproximadamente 4 niveis de prateleiras visiveis, com a maioria dos produtos em embalagens de caixa. A iluminacao e boa, permitindo uma boa visibilidade dos produtos.\n2. ANALISE ZONA A ZONA:\n- Prateleira Superior: Esta prateleira parece estar bem abastecida, com caixas de medicamentos organizadas. Ha alguns produtos mais altos no lado esquerdo e direito.\n- Segunda Prateleira de Cima: Esta prateleira tambem esta bem abastecida com caixas de medicamentos. Os produtos estao alinhados e organizados.\n- Segunda Prateleira de Baixo: Esta prateleira esta bem abastecida com caixas de medicamentos. Os produtos estao alinhados e organizados. Ha alguns produtos mais altos no lado esquerdo.\n- Prateleira Inferior: Esta prateleira esta bem abastecida com caixas de medicamentos e algumas garrafas. Os produtos estao alinhados e organizados.\n- Lado Esquerdo: A maioria dos produtos no lado esquerdo esta bem organizada e cheia.\n- Centro: A area central da prateleira esta bem abastecida e organizada.\n- Lado Direito: A maioria dos produtos no lado direito esta bem organizada e cheia.\n3. IDENTIFICACAO DE ANOMALIAS: Nenhuma anomalia significativa foi identificada. Todos os produtos parecem estar no lugar correto, bem alinhados e com etiquetas visiveis. Nao ha prateleiras vazias ou produtos danificados.\n4. CLASSIFICACAO FINAL: O status geral da prateleira e 'ok'. A taxa de preenchimento da prateleira e estimada em 0.9, pois a maioria dos espacos estao preenchidos com produtos. Nao ha problemas relevantes que justifiquem um status de 'warning' ou 'critical'.",
+  "_strategy": "B",
+  "_from_cache": true
+}

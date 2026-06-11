@@ -1,0 +1,21 @@
+{
+  "inspection_id": "INS_YYYYMMDD_HHMMSS_NNN",
+  "timestamp": "YYYY-MM-DDTHH:MM:SSZ",
+  "image_path": "path/to/image.jpg",
+  "zone_id": "Z_S3",
+  "overall_status": "ok|warning|critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf|wrong_product|damaged|misaligned|label_missing|other",
+      "location": "ex: prateleira inferior, lado esquerdo",
+      "severity": "low|medium|high",
+      "description": "descricao em linguagem natural do problema",
+      "confidence": 0.0,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.0,
+  "products_detected": ["lista de categorias de produto visiveis"],
+  "model_reasoning": "cadeia de raciocinio explicita antes da classificacao"
+}

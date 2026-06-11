@@ -1,0 +1,90 @@
+{
+  "shelf_inspector": {
+    "A": {
+      "api_success_rate": 1.0,
+      "json_parse_rate": 0.9333333333333333,
+      "issue_detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "severity_accuracy": null,
+      "hallucination_rate": 0.0,
+      "n_images": 15,
+      "n_ok_images": 10,
+      "n_gt_issue_types": 6,
+      "n_pred_issue_types": 0
+    },
+    "B": {
+      "api_success_rate": 0.5333333333333333,
+      "json_parse_rate": 1.0,
+      "issue_detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "severity_accuracy": null,
+      "hallucination_rate": 0.0,
+      "n_images": 15,
+      "n_ok_images": 10,
+      "n_gt_issue_types": 6,
+      "n_pred_issue_types": 0
+    },
+    "C": {
+      "api_success_rate": 0.06666666666666667,
+      "json_parse_rate": 1.0,
+      "issue_detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "severity_accuracy": null,
+      "hallucination_rate": 0.0,
+      "n_images": 15,
+      "n_ok_images": 10,
+      "n_gt_issue_types": 6,
+      "n_pred_issue_types": 0
+    }
+  },
+  "rule_engine": {
+    "n_active_rules": 3,
+    "n_records_evaluated": 32,
+    "n_records_with_match": 1,
+    "match_rate": 0.03125,
+    "matches_per_rule": {
+      "RULE_20260610_200901_001": {
+        "name": "Baixo preenchimento de prateleira",
+        "n_matches": 1
+      },
+      "RULE_20260610_201520_001": {
+        "name": "Produtos fora de posição excessivos",
+        "n_matches": 1
+      },
+      "RULE_20260610_201620_001": {
+        "name": "Prateleira Vazia Crítica",
+        "n_matches": 1
+      }
+    }
+  },
+  "rag_memory": {
+    "document": 0.26666666666666666,
+    "issue": 0.6,
+    "hybrid": 0.26666666666666666,
+    "_meta": {
+      "k": 3,
+      "n_records": 32
+    }
+  },
+  "llm_judge": {
+    "model": "gemini-3-flash-preview",
+    "n_judged": 2,
+    "avg_score": 4.5,
+    "per_image": [
+      {
+        "image": "data/images/normal/train_1002.jpg",
+        "score": 4,
+        "justification": "A classificação e a análise qualitativa estão corretas, havendo apenas uma pequena discrepância na estimativa da taxa de preenchimento."
+      },
+      {
+        "image": "data/images/normal/train_1066.jpg",
+        "score": 5,
+        "justification": "A saída do sistema é totalmente consistente com a referência em todos os campos e na análise das marcas e organização."
+      },
+      {
+        "image": "data/images/normal/train_1098.jpg",
+        "error": "sem record em cache para esta estrategia"
+      }
+    ]
+  }
+}

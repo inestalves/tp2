@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "description": "Ground truth definido manualmente (inspecao visual humana) para 15 imagens reais do SKU-110K, usado para comparar as estrategias de prompting A/B/C do shelf_inspector. As categorias de pasta (normal/dirty/ambiguous/empty/planogram_violation) refletem a heuristica usada para construir o dataset (Seccao 3), mas o ground truth aqui baseia-se exclusivamente no conteudo visual real de cada imagem.",
+    "issue_types": ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"],
+    "severities": ["low", "medium", "high"]
+  },
+  "images": [
+    {
+      "image_path": "data/images/normal/train_1002.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Prateleira de farmacia (medicamentos), totalmente preenchida e organizada por categoria, sem espacos vazios nem produtos fora de lugar visiveis."
+    },
+    {
+      "image_path": "data/images/normal/train_1066.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Prateleira de produtos de higiene (Dove/Olay), bem preenchida e organizada por linha de produto."
+    },
+    {
+      "image_path": "data/images/normal/train_1098.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.9,
+      "notes": "Prateleira de farmacia/higiene oral, bem preenchida, sem anomalias visiveis."
+    },
+    {
+      "image_path": "data/images/dirty/train_1291.jpg",
+      "overall_status": "warning",
+      "issues": [
+        {"type": "empty_shelf", "severity": "medium", "affected_area_pct": 0.10}
+      ],
+      "shelf_fill_rate": 0.85,
+      "notes": "Prateleira de analgesicos (Tylenol/Aleve). Prateleira superior tem varios espacos vazios entre as caixas, restantes niveis bem preenchidos."
+    },
+    {
+      "image_path": "data/images/dirty/train_1319.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Corredor de cafe, bem preenchido e organizado por marca."
+    },
+    {
+      "image_path": "data/images/dirty/train_1378.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.9,
+      "notes": "Frigorifico de bebidas, bem preenchido e organizado."
+    },
+    {
+      "image_path": "data/images/ambiguous/train_1007.jpg",
+      "overall_status": "warning",
+      "issues": [
+        {"type": "empty_shelf", "severity": "medium", "affected_area_pct": 0.15}
+      ],
+      "shelf_fill_rate": 0.8,
+      "notes": "Prateleira de cuidados de pes. Niveis superiores cheios; nivel inferior (caixas verdes) tem varios espacos vazios com a grelha branca visivel."
+    },
+    {
+      "image_path": "data/images/ambiguous/train_1346.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Corredor de produtos capilares, bem preenchido e organizado por marca."
+    },
+    {
+      "image_path": "data/images/ambiguous/train_1517.jpg",
+      "overall_status": "warning",
+      "issues": [
+        {"type": "damaged", "severity": "low", "affected_area_pct": 0.02}
+      ],
+      "shelf_fill_rate": 0.9,
+      "notes": "Prateleira de pensos higienicos. Embalagem rosa rasgada/danificada pendurada de forma irregular entre os niveis."
+    },
+    {
+      "image_path": "data/images/empty/train_1041.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Prateleira de cuidados de pele, totalmente preenchida e organizada (apesar do nome da pasta 'empty', a heuristica baseou-se em uniformidade visual, nao em prateleiras vazias)."
+    },
+    {
+      "image_path": "data/images/empty/train_1145.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.9,
+      "notes": "Prateleira de produtos para bebe, bem preenchida. Grande area azul acima e parede/sinalizacao, nao prateleira vazia."
+    },
+    {
+      "image_path": "data/images/empty/train_1425.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Prateleira de brinquedos/higiene oral, totalmente preenchida."
+    },
+    {
+      "image_path": "data/images/planogram_violation/train_1029.jpg",
+      "overall_status": "ok",
+      "issues": [],
+      "shelf_fill_rate": 0.95,
+      "notes": "Corredor de cafe/pequeno-almoco, bem preenchido e organizado."
+    },
+    {
+      "image_path": "data/images/planogram_violation/train_106.jpg",
+      "overall_status": "warning",
+      "issues": [
+        {"type": "wrong_product", "severity": "medium", "affected_area_pct": 0.08},
+        {"type": "empty_shelf", "severity": "low", "affected_area_pct": 0.05}
+      ],
+      "shelf_fill_rate": 0.85,
+      "notes": "Frigorifico 'Pop' com varias marcas/tipos de bebidas misturadas na mesma seccao (refrigerantes, sumos, energeticos), e pequenos espacos vazios entre produtos."
+    },
+    {
+      "image_path": "data/images/planogram_violation/train_111.jpg",
+      "overall_status": "warning",
+      "issues": [
+        {"type": "wrong_product", "severity": "low", "affected_area_pct": 0.03}
+      ],
+      "shelf_fill_rate": 0.9,
+      "notes": "Expositor de cafe (end-cap). Caixa de cartao por abrir/desorganizada colocada sobre os produtos no nivel superior, fora de lugar."
+    }
+  ]
+}

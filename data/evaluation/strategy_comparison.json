@@ -1,0 +1,542 @@
+{
+  "A": {
+    "metrics": {
+      "api_success_rate": 1.0,
+      "json_parse_rate": 0.9333333333333333,
+      "issue_detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "severity_accuracy": null,
+      "hallucination_rate": 0.0,
+      "n_images": 15,
+      "n_ok_images": 10,
+      "n_gt_issue_types": 6,
+      "n_pred_issue_types": 0
+    },
+    "per_image": [
+      {
+        "image": "data/images/normal/train_1002.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/normal/train_1066.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/normal/train_1098.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/dirty/train_1291.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "empty_shelf",
+            "medium"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/dirty/train_1319.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/dirty/train_1378.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/ambiguous/train_1007.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "empty_shelf",
+            "medium"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/ambiguous/train_1346.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/ambiguous/train_1517.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "damaged",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/empty/train_1041.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/empty/train_1145.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/empty/train_1425.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/planogram_violation/train_1029.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/planogram_violation/train_106.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "wrong_product",
+            "medium"
+          ],
+          [
+            "empty_shelf",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/planogram_violation/train_111.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "wrong_product",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      }
+    ]
+  },
+  "B": {
+    "metrics": {
+      "api_success_rate": 0.5333333333333333,
+      "json_parse_rate": 1.0,
+      "issue_detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "severity_accuracy": null,
+      "hallucination_rate": 0.0,
+      "n_images": 15,
+      "n_ok_images": 10,
+      "n_gt_issue_types": 6,
+      "n_pred_issue_types": 0
+    },
+    "per_image": [
+      {
+        "image": "data/images/normal/train_1002.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/normal/train_1066.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/normal/train_1098.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/dirty/train_1291.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "empty_shelf",
+            "medium"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/dirty/train_1319.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/dirty/train_1378.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/ambiguous/train_1007.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "empty_shelf",
+            "medium"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/ambiguous/train_1346.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/ambiguous/train_1517.jpg",
+        "gt_status": "warning",
+        "pred_status": "ok",
+        "gt_issues": [
+          [
+            "damaged",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/empty/train_1041.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/empty/train_1145.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/empty/train_1425.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/planogram_violation/train_1029.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/planogram_violation/train_106.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "wrong_product",
+            "medium"
+          ],
+          [
+            "empty_shelf",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/planogram_violation/train_111.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "wrong_product",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      }
+    ]
+  },
+  "C": {
+    "metrics": {
+      "api_success_rate": 0.06666666666666667,
+      "json_parse_rate": 1.0,
+      "issue_detection_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "severity_accuracy": null,
+      "hallucination_rate": 0.0,
+      "n_images": 15,
+      "n_ok_images": 10,
+      "n_gt_issue_types": 6,
+      "n_pred_issue_types": 0
+    },
+    "per_image": [
+      {
+        "image": "data/images/normal/train_1002.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/normal/train_1066.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/normal/train_1098.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/dirty/train_1291.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "empty_shelf",
+            "medium"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/dirty/train_1319.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/dirty/train_1378.jpg",
+        "gt_status": "ok",
+        "pred_status": "ok",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": false,
+        "from_cache": true
+      },
+      {
+        "image": "data/images/ambiguous/train_1007.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "empty_shelf",
+            "medium"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/ambiguous/train_1346.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/ambiguous/train_1517.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "damaged",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/empty/train_1041.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/empty/train_1145.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/empty/train_1425.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/planogram_violation/train_1029.jpg",
+        "gt_status": "ok",
+        "pred_status": "unknown",
+        "gt_issues": [],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/planogram_violation/train_106.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "wrong_product",
+            "medium"
+          ],
+          [
+            "empty_shelf",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      },
+      {
+        "image": "data/images/planogram_violation/train_111.jpg",
+        "gt_status": "warning",
+        "pred_status": "unknown",
+        "gt_issues": [
+          [
+            "wrong_product",
+            "low"
+          ]
+        ],
+        "pred_issues": [],
+        "fallback": true,
+        "from_cache": false
+      }
+    ]
+  }
+}

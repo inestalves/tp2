@@ -1,0 +1,29 @@
+{
+  "rule_id": "RULE_002",
+  "created_at": "2026-06-10T20:10:35Z",
+  "natural_language": "Alertar quando houver muitos produtos fora de posicao numa prateleira",
+  "description": "O sistema deve emitir um alerta quando forem detetados produtos desalinhados (misaligned) numa prateleira, em quantidade considerada elevada.",
+  "conditions": {
+    "zone_filter": null,
+    "time_filter": null,
+    "issue_types": [
+      "misaligned"
+    ],
+    "severity_threshold": "medium",
+    "fill_rate_threshold": null,
+    "location_filter": null
+  },
+  "action": {
+    "alert_level": "warning",
+    "notification_message": "Alerta: foram detetados produtos desalinhados na zona {zone_id} (severidade {severity})."
+  },
+  "validation": {
+    "is_valid": false,
+    "ambiguities": [
+      "A descricao nao especifica o que significa 'muitos' produtos fora de posicao (ex: percentagem de area afetada ou numero de issues), pelo que nao e possivel definir um limiar fiavel."
+    ],
+    "assumptions": [
+      "Assumiu-se severidade minima 'medium' como proxy provisorio para 'muitos', mas o schema de condicoes nao permite expressar um limiar de area afetada."
+    ]
+  }
+}

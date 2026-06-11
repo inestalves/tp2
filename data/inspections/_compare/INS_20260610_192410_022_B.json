@@ -1,0 +1,21 @@
+{
+  "inspection_id": "INS_20260610_192410_022",
+  "timestamp": "2026-06-10T19:24:10Z",
+  "image_path": "data/images/ambiguous/train_1007.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "foot care",
+    "foot creams",
+    "foot plasters",
+    "foot sprays",
+    "foot files",
+    "socks",
+    "insoles"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho com produtos para cuidados com os pés. Existem três níveis de prateleiras visíveis, todos bem abastecidos com uma variedade de produtos. \n2. ANALISE ZONA A ZONA: \n- Prateleira superior: Bem abastecida, com produtos de cuidados com os pés como cremes, sprays e acessórios. \n- Prateleira intermédia: Bem abastecida, com uma variedade de produtos para os pés, incluindo pensos para bolhas, cremes e sprays. \n- Prateleira inferior: Bem abastecida, com produtos como palmilhas e outros acessórios para os pés. \n3. IDENTIFICACAO DE ANOMALIAS: Nenhuma anomalia significativa foi identificada em nenhuma das zonas. Todos os produtos parecem estar corretamente posicionados e as prateleiras estão bem abastecidas. \n4. CLASSIFICACAO FINAL: Com base na análise, o estado geral da prateleira é 'ok'. A taxa de preenchimento da prateleira é estimada em 0.9, indicando que está quase totalmente cheia. Não há problemas relevantes que justifiquem um 'warning' ou 'critical'.",
+  "_strategy": "B",
+  "_from_cache": true
+}

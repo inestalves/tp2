@@ -1,0 +1,16 @@
+{
+  "inspection_id": "INS_20260610_192330_019",
+  "timestamp": "2026-06-10T19:23:30Z",
+  "image_path": "data/images/dirty/train_1291.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "pain_relief",
+    "medication"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de supermercado com vários níveis de produtos farmacêuticos, predominantemente analgésicos e medicamentos para alívio da dor. Existem 4 níveis de prateleiras visíveis, com produtos organizados em caixas e frascos.\n2. ANALISE ZONA A ZONA:\n- Prateleira Superior: Está bem abastecida, com caixas de medicamentos organizadas. Não há sinais de produtos danificados ou desalinhados.\n- Prateleira Intermediária Superior: Bem abastecida, com caixas de medicamentos organizadas. Alguns produtos podem estar ligeiramente desalinhados, mas não de forma significativa.\n- Prateleira Intermediária Inferior: Bem abastecida, com caixas e frascos de medicamentos organizados. Há um pequeno espaço vazio à direita.\n- Prateleira Inferior: Bem abastecida, com caixas de medicamentos organizadas. Há alguns espaços vazios à direita, mas a maior parte da prateleira está cheia.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas que justifiquem uma classificação de 'warning' ou 'critical'. A prateleira está bem abastecida e organizada na sua maioria.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok'. A taxa de preenchimento da prateleira é alta, estimada em 0.9.",
+  "_strategy": "B",
+  "_from_cache": true
+}

@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260610_192404_020",
+  "timestamp": "2026-06-10T19:24:04Z",
+  "image_path": "data/images/dirty/train_1319.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "coffee",
+    "coffee creamer",
+    "coffee syrup",
+    "biscotti",
+    "apple cider"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de supermercado com vários níveis de produtos, predominantemente café e cremes para café. Existem pelo menos 4 níveis visíveis.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior: Cheia, com embalagens de café e outros produtos. Parece organizada.\n   - Segunda Prateleira (de cima para baixo): Cheia, com várias marcas e tipos de café. Organizada.\n   - Terceira Prateleira: Cheia, com embalagens de café, cremes para café e alguns biscoitos. Organizada.\n   - Quarta Prateleira: Cheia, com cremes para café, xaropes e algumas caixas de maçã. Organizada.\n   - Prateleira Inferior (visível parcialmente): Contém caixas de produtos para bebidas quentes e cremes para café. Parece organizada.\n   - Lado Esquerdo: Cheio de produtos de café.\n   - Centro: Cheio de produtos de café e cremes.\n   - Lado Direito: Cheio de produtos de café, cremes e xaropes.\n3. IDENTIFICACAO DE ANOMALIAS: Nenhuma anomalia significativa foi identificada. Todos os produtos parecem estar nas suas posições corretas, as prateleiras estão bem abastecidas e não há produtos danificados ou com etiquetas em falta visíveis.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok'. A taxa de preenchimento da prateleira é alta, estimada em 0.9.",
+  "_strategy": "B",
+  "_from_cache": true
+}

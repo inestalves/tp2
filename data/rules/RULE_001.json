@@ -1,0 +1,25 @@
+{
+  "rule_id": "RULE_001",
+  "created_at": "2026-06-10T20:09:01Z",
+  "natural_language": "Alertar sempre que o shelf_fill_rate de uma prateleira for inferior a 0.7",
+  "description": "O sistema deve emitir um alerta sempre que a taxa de preenchimento de prateleira (shelf_fill_rate) de qualquer zona for inferior a 0.7 (70%).",
+  "conditions": {
+    "zone_filter": null,
+    "time_filter": null,
+    "issue_types": null,
+    "severity_threshold": null,
+    "fill_rate_threshold": 0.7,
+    "location_filter": null
+  },
+  "action": {
+    "alert_level": "warning",
+    "notification_message": "Alerta: a zona {zone_id} tem uma taxa de preenchimento de {shelf_fill_rate}, abaixo do limiar de 70%."
+  },
+  "validation": {
+    "is_valid": true,
+    "ambiguities": [],
+    "assumptions": [
+      "Aplica-se a todas as zonas, dado que a descricao nao especifica nenhuma zona em particular."
+    ]
+  }
+}

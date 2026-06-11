@@ -1,0 +1,13 @@
+{
+  "inspection_id": "INS_20260610_195856_006",
+  "timestamp": "2026-06-10T19:58:56Z",
+  "image_path": "data/images/planogram_violation/train_106.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "unknown",
+  "issues": [],
+  "shelf_fill_rate": null,
+  "products_detected": [],
+  "model_reasoning": "FALLBACK: nao foi possivel analisar esta imagem. Motivo: Erro na chamada a API: [Errno 11001] getaddrinfo failed",
+  "_fallback": true,
+  "_error": "Erro na chamada a API: [Errno 11001] getaddrinfo failed"
+}

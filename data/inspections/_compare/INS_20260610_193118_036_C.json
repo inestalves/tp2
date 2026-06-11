@@ -1,0 +1,18 @@
+{
+  "inspection_id": "INS_20260610_193118_036",
+  "timestamp": "2026-06-10T19:31:18Z",
+  "image_path": "data/images/dirty/train_1378.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "agua engarrafada",
+    "sumos",
+    "bebidas desportivas",
+    "leite proteico"
+  ],
+  "model_reasoning": "A prateleira está bem organizada e preenchida. A maioria dos produtos está alinhada e nas suas posições corretas. Existem algumas pequenas áreas com menos produtos, mas não o suficiente para serem consideradas um problema significativo. Não foram detetados produtos danificados, fora de lugar ou com etiquetas em falta. O estado geral é 'ok'.",
+  "_strategy": "C",
+  "_from_cache": true
+}
