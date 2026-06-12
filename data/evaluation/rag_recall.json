@@ -1,12 +1,12 @@
 {
   "document": {
-    "avg_recall_at_k": 0.26666666666666666,
+    "avg_recall_at_k": 0.4,
     "per_query": [
       {
         "query": "prateleiras vazias ou com falta de stock",
-        "n_relevant": 8,
-        "hits": 1,
-        "recall_at_k": 0.3333333333333333
+        "n_relevant": 22,
+        "hits": 3,
+        "recall_at_k": 1.0
       },
       {
         "query": "produtos trocados ou fora de posicao na prateleira",
@@ -16,7 +16,7 @@
       },
       {
         "query": "produtos desalinhados ou mal arrumados",
-        "n_relevant": 2,
+        "n_relevant": 13,
         "hits": 0,
         "recall_at_k": 0.0
       },
@@ -28,18 +28,18 @@
       },
       {
         "query": "prateleiras bem organizadas e completamente preenchidas sem problemas",
-        "n_relevant": 25,
+        "n_relevant": 50,
         "hits": 3,
         "recall_at_k": 1.0
       }
     ]
   },
   "issue": {
-    "avg_recall_at_k": 0.6,
+    "avg_recall_at_k": 0.5666666666666667,
     "per_query": [
       {
         "query": "prateleiras vazias ou com falta de stock",
-        "n_relevant": 8,
+        "n_relevant": 22,
         "hits": 3,
         "recall_at_k": 1.0
       },
@@ -51,9 +51,9 @@
       },
       {
         "query": "produtos desalinhados ou mal arrumados",
-        "n_relevant": 2,
+        "n_relevant": 13,
         "hits": 1,
-        "recall_at_k": 0.5
+        "recall_at_k": 0.3333333333333333
       },
       {
         "query": "inspecoes em estado critico que precisam de atencao imediata",
@@ -63,30 +63,30 @@
       },
       {
         "query": "prateleiras bem organizadas e completamente preenchidas sem problemas",
-        "n_relevant": 25,
+        "n_relevant": 50,
         "hits": 3,
         "recall_at_k": 1.0
       }
     ]
   },
   "hybrid": {
-    "avg_recall_at_k": 0.26666666666666666,
+    "avg_recall_at_k": 0.4333333333333333,
     "per_query": [
       {
         "query": "prateleiras vazias ou com falta de stock",
-        "n_relevant": 8,
-        "hits": 1,
-        "recall_at_k": 0.3333333333333333
+        "n_relevant": 22,
+        "hits": 3,
+        "recall_at_k": 1.0
       },
       {
         "query": "produtos trocados ou fora de posicao na prateleira",
         "n_relevant": 2,
-        "hits": 0,
-        "recall_at_k": 0.0
+        "hits": 1,
+        "recall_at_k": 0.5
       },
       {
         "query": "produtos desalinhados ou mal arrumados",
-        "n_relevant": 2,
+        "n_relevant": 13,
         "hits": 0,
         "recall_at_k": 0.0
       },
@@ -98,14 +98,14 @@
       },
       {
         "query": "prateleiras bem organizadas e completamente preenchidas sem problemas",
-        "n_relevant": 25,
-        "hits": 3,
-        "recall_at_k": 1.0
+        "n_relevant": 50,
+        "hits": 2,
+        "recall_at_k": 0.6666666666666666
       }
     ]
   },
   "_meta": {
     "k": 3,
-    "n_records": 32
+    "n_records": 74
   }
 }

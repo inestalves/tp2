@@ -1,38 +1,3 @@
-"""
-Componente 3: RAG Memory
-
-Indexacao e recuperacao semantica do historico de inspecoes (records gerados
-por shelf_inspector.py), usando ChromaDB (vectorstore persistente em
-vectorstore/) e sentence-transformers multilingue para os embeddings.
-
-Estrategia de chunking (comparadas com Recall@3):
-- "document": um chunk por inspecao, com um resumo textual (estado geral,
-  zona, taxa de preenchimento, issues, produtos, excerto do raciocinio do
-  modelo).
-- "issue": um chunk por issue detetado (ou um chunk "sem problemas" para
-  inspecoes sem issues).
-- "hybrid": combinacao das duas anteriores (recomendada).
-
-Por omissao, os resumos indexados sao gerados localmente (template) a partir
-dos campos estruturados do record e do "model_reasoning" ja existente, o que
-e deterministico, gratuito e reprodutivel. Quando `summary_mode="llm"` e
-fornecido um cliente Gemini, o campo "summary" indexado para os chunks de
-tipo "document" e gerado pela LLM (Seccao 6.2 do enunciado;
-prompts/rag_summary.txt) - usado com moderacao dado o limite severo de quota
-da API gratuita (20 pedidos/dia/modelo, ver strategy_comparison.json).
-
-As consultas em linguagem natural (`answer_query`) recuperam os k chunks mais
-relevantes e, se houver um cliente Gemini disponivel, usam a LLM para
-sintetizar uma resposta com referencia explicita a inspection_id e data
-(Seccao 6.4); caso contrario, devolvem uma resposta de fallback determinista
-construida a partir dos mesmos registos recuperados.
-
-Uso:
-    python src/rag_memory.py --index --strategy hybrid
-    python src/rag_memory.py --query "prateleiras vazias" --n 3 --strategy hybrid
-    python src/rag_memory.py --ask "Quando foi a ultima vez que a zona Z_S1 teve problemas de prateleira vazia?"
-    python src/rag_memory.py --evaluate
-"""
 from __future__ import annotations
 
 import argparse
@@ -57,14 +22,13 @@ MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
 VALID_STRATEGIES = ("document", "issue", "hybrid")
 
-# 4 perguntas obrigatórias
+# 4 perguntas
 OBLIGATORY_QUERIES = [
     "Quando foi a ultima vez que a zona Z_S1 teve problemas de prateleira vazia?",
     "Que zonas tiveram mais issues de planograma nas ultimas 2 semanas?",
     "Existe algum padrao nos problemas detetados as sextas-feiras a tarde?",
     "Que regras foram mais frequentemente disparadas este mes?",
 ]
-
 
 # carregamento de inspection records
 def load_inspection_records(base_dir: Path | None = None) -> list[dict]:
@@ -87,6 +51,17 @@ def load_inspection_records(base_dir: Path | None = None) -> list[dict]:
 
 
 # Geracao de texto (sem chamadas ao Gemini)
+def _normalize_pct(value: float | None) -> float:
+    """Normaliza affected_area_pct para fracao 0-1.
+
+    Os inspection_records reais nem sempre seguem o schema (que pede uma
+    fracao 0-1): por vezes o modelo devolve uma percentagem 0-100 (ex: 25.0
+    para 25%). Valores > 1 sao tratados como percentagem e divididos por
+    100; valores <= 1 sao assumidos como fracao."""
+    value = value or 0
+    return value / 100 if value > 1 else value
+
+
 def build_record_text(record: dict) -> str:
     status = record.get("overall_status", "unknown")
     zone = record.get("zone_id", "?")
@@ -100,7 +75,7 @@ def build_record_text(record: dict) -> str:
     if issues:
         issue_descs = [
             f"{iss.get('type')} (severidade {iss.get('severity')}, "
-            f"{(iss.get('affected_area_pct') or 0):.0%} da area)"
+            f"{_normalize_pct(iss.get('affected_area_pct')):.0%} da area)"
             for iss in issues
         ]
         parts.append("Problemas detetados: " + "; ".join(issue_descs) + ".")
@@ -134,11 +109,6 @@ def build_summary_prompt(record: dict) -> str:
 
 # gerar summary
 def generate_summary_llm(record: dict, client=None) -> str:
-    """Gera o "summary" indexado para um record (Seccao 6.2 do enunciado).
-
-    Se `client` for None, ou a chamada ao Gemini falhar, recorre ao resumo
-    local determinista `build_record_text` (fallback documentado, dado o
-    limite severo de quota da API gratuita)."""
     if client is None:
         return build_record_text(record)
     try:
@@ -160,7 +130,7 @@ def build_issue_text(record: dict, issue: dict) -> str:
     return (
         f"Na zona {zone}, foi detetado um problema do tipo '{issue.get('type')}' "
         f"com severidade '{issue.get('severity')}', afetando "
-        f"{(issue.get('affected_area_pct') or 0):.0%} da area da prateleira. "
+        f"{_normalize_pct(issue.get('affected_area_pct')):.0%} da area da prateleira. "
         f"Estado geral da inspecao: {record.get('overall_status')}."
     )
 
@@ -182,12 +152,6 @@ def _base_metadata(record: dict) -> dict:
 
 def get_chunks(record: dict, strategy: str = "hybrid", summary_mode: str = "template",
                 client=None) -> list[tuple[str, str, dict]]:
-    """Devolve [(chunk_id, texto, metadata), ...] para um record, de acordo
-    com a estrategia de chunking ("document", "issue" ou "hybrid").
-
-    `summary_mode="llm"` (com `client` definido) gera o texto do chunk
-    "document" via LLM (Seccao 6.2); por omissao ("template") usa
-    `build_record_text` (resumo local determinista)."""
     if strategy not in VALID_STRATEGIES:
         raise ValueError(f"Estrategia de chunking invalida: {strategy}")
 
@@ -249,9 +213,6 @@ def collection_name_for(strategy: str) -> str:
 def index_records(strategy: str = "hybrid", records: list[dict] | None = None,
                    reset: bool = True, summary_mode: str = "template",
                    llm_client=None) -> tuple["chromadb.Collection", int, int]:
-    """Indexa inspection records em ChromaDB usando a estrategia de chunking
-    indicada. Devolve (collection, n_records, n_chunks).
-    """
     client = get_client()
     name = collection_name_for(strategy)
     if reset:
@@ -279,9 +240,6 @@ def index_records(strategy: str = "hybrid", records: list[dict] | None = None,
 
 
 def query_memory(query_text: str, n_results: int = 3, strategy: str = "hybrid") -> list[dict]:
-    """Pesquisa semantica em linguagem natural sobre o historico de
-    inspecoes. Devolve ate `n_results` records distintos (deduplicados por
-    inspection_id), ordenados por relevancia."""
     client = get_client()
     collection = client.get_or_create_collection(
         collection_name_for(strategy), embedding_function=get_embedding_function()
@@ -289,15 +247,27 @@ def query_memory(query_text: str, n_results: int = 3, strategy: str = "hybrid") 
     if collection.count() == 0:
         return []
 
+    # Os chunks "document" (texto mais longo e generico) tendem a obter
+    # distancias sistematicamente menores que os chunks "issue" (mais
+    # curtos e especificos), pelo que numa consulta unica a "hybrid" os
+    # chunks "document" dominam o ranking e "tapam" chunks "issue" mais
+    # relevantes do mesmo record. Para evitar isso, consultamos cada
+    # chunk_type presente na coleccao separadamente e fundimos os
+    # candidatos antes de deduplicar por inspection_id.
+    chunk_types = sorted(set(collection.get(include=["metadatas"])["metadatas"][i].get("chunk_type")
+                              for i in range(collection.count())))
     fetch_n = min(collection.count(), n_results * 3)
-    res = collection.query(query_texts=[query_text], n_results=fetch_n)
 
-    seen: dict[str, dict] = {}
-    for doc, meta, dist in zip(res["documents"][0], res["metadatas"][0], res["distances"][0]):
-        iid = meta["inspection_id"]
-        if iid not in seen or dist < seen[iid]["distance"]:
-            seen[iid] = {
-                "inspection_id": iid,
+    per_type: list[list[dict]] = []
+    for chunk_type in chunk_types:
+        res = collection.query(
+            query_texts=[query_text], n_results=fetch_n,
+            where={"chunk_type": chunk_type},
+        )
+        candidates = []
+        for doc, meta, dist in zip(res["documents"][0], res["metadatas"][0], res["distances"][0]):
+            candidates.append({
+                "inspection_id": meta["inspection_id"],
                 "image_path": meta.get("image_path"),
                 "zone_id": meta.get("zone_id"),
                 "overall_status": meta.get("overall_status"),
@@ -305,9 +275,32 @@ def query_memory(query_text: str, n_results: int = 3, strategy: str = "hybrid") 
                 "timestamp": meta.get("timestamp", ""),
                 "text": doc,
                 "distance": dist,
-            }
+            })
+        per_type.append(candidates)
 
-    return sorted(seen.values(), key=lambda r: r["distance"])[:n_results]
+    # Interleave por rank (round-robin entre chunk_types) em vez de ordenar
+    # globalmente por distancia: garante que cada chunk_type tem hipotese de
+    # contribuir para o top-N, mesmo que um tipo (ex: "document", textos
+    # mais longos/genericos) tenha distancias sistematicamente menores e
+    # domine o ranking global, "tapando" chunks "issue" mais especificos.
+    seen: set[str] = set()
+    result: list[dict] = []
+    max_len = max((len(c) for c in per_type), default=0)
+    for rank in range(max_len):
+        for candidates in per_type:
+            if rank >= len(candidates):
+                continue
+            cand = candidates[rank]
+            if cand["inspection_id"] in seen:
+                continue
+            seen.add(cand["inspection_id"])
+            result.append(cand)
+            if len(result) >= n_results:
+                break
+        if len(result) >= n_results:
+            break
+
+    return sorted(result, key=lambda r: r["distance"])
 
 
 # RAG
@@ -324,9 +317,6 @@ def build_answer_prompt(query_text: str, retrieved: list[dict]) -> str:
 
 
 def _fallback_answer(query_text: str, retrieved: list[dict]) -> str:
-    """Resposta determinista (sem LLM), citando inspection_id e data dos
-    registos recuperados - usada quando nao ha cliente Gemini disponivel ou
-    a chamada falha."""
     lines = [
         f"Foram encontrados {len(retrieved)} registo(s) relevante(s) no historico de "
         f"inspecoes para a pergunta \"{query_text}\":"
@@ -341,13 +331,6 @@ def _fallback_answer(query_text: str, retrieved: list[dict]) -> str:
 
 
 def answer_query(query_text: str, k: int = 3, strategy: str = "hybrid", client=None) -> dict:
-    """Recupera os k chunks mais relevantes e sintetiza uma resposta com
-    referencia explicita a inspection_id e data (Seccao 6.4).
-
-    Devolve {"query", "answer", "sources": [{"inspection_id","date","zone_id"}]}.
-    Se `client` for None ou a chamada ao Gemini falhar, usa
-    `_fallback_answer` (resposta determinista a partir dos mesmos registos
-    recuperados)."""
     retrieved = query_memory(query_text, n_results=k, strategy=strategy)
 
     if not retrieved:
