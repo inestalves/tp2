@@ -7,3 +7,4 @@ cache/
 vectorstore/
 .idea/
 data/images/
+data/dev_artifacts/

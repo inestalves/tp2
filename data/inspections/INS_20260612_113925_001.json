@@ -1,0 +1,26 @@
+{
+  "inspection_id": "INS_20260612_113925_001",
+  "timestamp": "2026-06-12T11:39:25Z",
+  "image_path": "data/images/dirty/train_1291.jpg",
+  "zone_id": "Z_S3",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "Acetaminophen PM",
+    "Tylenol PM",
+    "Tylenol 8HR Arthritis",
+    "Arthritis Pain Relief",
+    "Tylenol",
+    "Aleve",
+    "Aleve PM",
+    "Acetaminophen",
+    "Naproxen Sodium",
+    "Aleve Liquid Gels",
+    "Motrin",
+    "Bayer",
+    "Excedrin Extra Strength"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho de uma secção de farmácia, com 6 níveis principais visíveis e uma parte superior parcial. Os produtos predominantes são analgésicos de venda livre, incluindo marcas como Tylenol, Aleve, Acetaminophen, Motrin, Excedrin e Bayer.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (parcial): Bem abastecida com caixas de Acetaminophen PM, Tylenol PM e Aleve PM. Organização impecável.\n   - Prateleira 1: Completamente abastecida com caixas e frascos de Tylenol 8HR Arthritis, Arthritis Pain Relief, Tylenol e Aleve. Produtos bem alinhados e preços visíveis.\n   - Prateleira 2: Totalmente abastecida com caixas de Tylenol 8HR, frascos de Acetaminophen e Aleve. Produtos organizados e preços visíveis.\n   - Prateleira 3: Bem abastecida com caixas de Acetaminophen, frascos de Naproxen Sodium e caixas de Aleve Liquid Gels. Tudo parece estar em ordem e com preços.\n   - Prateleira 4: Cheia de caixas de Motrin, Aleve e frascos de Bayer. Produtos bem dispostos e sem falhas.\n   - Prateleira 5 (Inferior): Completamente abastecida com caixas de Excedrin Extra Strength, Aleve e Bayer. Organização e alinhamento excelentes.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias em nenhuma das zonas. Todas as prateleiras estão cheias, os produtos estão bem alinhados, não há produtos danificados, etiquetas em falta ou espaços vazios significativos.\n4. CLASSIFICACAO FINAL: O estado geral é 'ok' devido à ausência de quaisquer problemas relevantes. A prateleira está excecionalmente bem abastecida e organizada. A taxa de preenchimento da prateleira global é estimada em 0.97, indicando que está quase totalmente preenchida.",
+  "_strategy": "B"
+}

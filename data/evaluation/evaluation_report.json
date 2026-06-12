@@ -13,78 +13,102 @@
       "n_pred_issue_types": 0
     },
     "B": {
-      "api_success_rate": 0.5333333333333333,
+      "api_success_rate": 1.0,
       "json_parse_rate": 1.0,
-      "issue_detection_rate": 0.0,
-      "false_positive_rate": 0.0,
-      "severity_accuracy": null,
-      "hallucination_rate": 0.0,
+      "issue_detection_rate": 0.16666666666666666,
+      "false_positive_rate": 0.75,
+      "severity_accuracy": 1.0,
+      "hallucination_rate": 0.2,
       "n_images": 15,
       "n_ok_images": 10,
       "n_gt_issue_types": 6,
-      "n_pred_issue_types": 0
+      "n_pred_issue_types": 4
     },
     "C": {
-      "api_success_rate": 0.06666666666666667,
+      "api_success_rate": 0.9333333333333333,
       "json_parse_rate": 1.0,
-      "issue_detection_rate": 0.0,
-      "false_positive_rate": 0.0,
-      "severity_accuracy": null,
-      "hallucination_rate": 0.0,
+      "issue_detection_rate": 0.16666666666666666,
+      "false_positive_rate": 0.8888888888888888,
+      "severity_accuracy": 1.0,
+      "hallucination_rate": 0.3,
       "n_images": 15,
       "n_ok_images": 10,
       "n_gt_issue_types": 6,
-      "n_pred_issue_types": 0
+      "n_pred_issue_types": 9
     }
   },
   "rule_engine": {
     "n_active_rules": 3,
-    "n_records_evaluated": 32,
+    "n_total_rules": 4,
+    "n_records_evaluated": 25,
     "n_records_with_match": 1,
-    "match_rate": 0.03125,
+    "match_rate": 0.04,
     "matches_per_rule": {
-      "RULE_20260610_200901_001": {
-        "name": "Baixo preenchimento de prateleira",
-        "n_matches": 1
+      "RULE_001": {
+        "description": "O sistema deve emitir um alerta sempre que a taxa de preenchimento de prateleira (shelf_fill_rate) de qualquer zona for inferior a 0.7 (70%).",
+        "n_matches": 0
       },
-      "RULE_20260610_201520_001": {
-        "name": "Produtos fora de posição excessivos",
-        "n_matches": 1
+      "RULE_003": {
+        "description": "O sistema deve emitir um alerta quando for detetado pelo menos um issue do tipo 'produto fora de posicao' (wrong_product) com severidade media ou superior em qualquer zona.",
+        "n_matches": 0
       },
-      "RULE_20260610_201620_001": {
-        "name": "Prateleira Vazia Crítica",
+      "RULE_004": {
+        "description": "O sistema deve emitir um alerta critico sempre que for detetado um issue do tipo 'prateleira vazia' (empty_shelf) com severidade alta em qualquer zona.",
         "n_matches": 1
       }
-    }
+    },
+    "rule_parse_rate": 1.0,
+    "rule_correctness": 1.0,
+    "n_invalid_rules": 1,
+    "ambiguity_detection_rate": 1.0
   },
   "rag_memory": {
-    "document": 0.26666666666666666,
-    "issue": 0.6,
-    "hybrid": 0.26666666666666666,
-    "_meta": {
-      "k": 3,
-      "n_records": 32
-    }
-  },
-  "llm_judge": {
-    "model": "gemini-3-flash-preview",
-    "n_judged": 2,
-    "avg_score": 4.5,
-    "per_image": [
+    "recall_at_3": {
+      "document": 0.3333333333333333,
+      "issue": 0.7777777777777778,
+      "hybrid": 0.3333333333333333,
+      "_meta": {
+        "k": 3,
+        "n_records": 25
+      }
+    },
+    "faithfulness": 1.0,
+    "answer_relevance": 1.0,
+    "n_queries_evaluated": 4,
+    "per_query": [
       {
-        "image": "data/images/normal/train_1002.jpg",
-        "score": 4,
-        "justification": "A classificação e a análise qualitativa estão corretas, havendo apenas uma pequena discrepância na estimativa da taxa de preenchimento."
+        "query": "Quando foi a ultima vez que a zona Z_S1 teve problemas de prateleira vazia?",
+        "answer": "A última vez que a zona Z_S1 teve problemas de prateleira vazia foi em 2026-06-12. Esta informação é confirmada pelos registos de inspeção INS_20260612_090627_015, INS_20260612_090359_007 e INS_20260612_090841_023, todos datados de 2026-06-12, que reportam a deteção de problemas do tipo 'empty_shelf' nesta zona.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
       },
       {
-        "image": "data/images/normal/train_1066.jpg",
-        "score": 5,
-        "justification": "A saída do sistema é totalmente consistente com a referência em todos os campos e na análise das marcas e organização."
+        "query": "Que zonas tiveram mais issues de planograma nas ultimas 2 semanas?",
+        "answer": "Nas últimas 2 semanas, a zona Z_S1 teve mais issues de planograma. Segundo a inspeção INS_20260612_090442_009, em 2026-06-12, foram detetados múltiplos problemas de 'misaligned' (desorganização de produtos) em várias prateleiras da Z_S1. Adicionalmente, a inspeção INS_20260612_090517_011, na mesma data, também registou um problema de 'misaligned' na zona Z_S1. A zona Z_S2, por sua vez, teve um problema de 'empty_shelf' (falta de stock) na inspeção INS_20260610_183302_001, em 2026-06-10.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
       },
       {
-        "image": "data/images/normal/train_1098.jpg",
-        "error": "sem record em cache para esta estrategia"
+        "query": "Existe algum padrao nos problemas detetados as sextas-feiras a tarde?",
+        "answer": "Com base nos registos fornecidos, não é possível identificar um padrão nos problemas detetados às sextas-feiras à tarde. As inspeções INS_20260612_090612_014 e INS_20260612_090310_004, ambas de 2026-06-12, ocorreram na manhã de sexta-feira. A inspeção INS_20260610_183302_001, de 2026-06-10, ocorreu numa quarta-feira à tarde. Não existem registos de inspeções realizadas especificamente em sextas-feiras à tarde para analisar.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
+      },
+      {
+        "query": "Que regras foram mais frequentemente disparadas este mes?",
+        "answer": "A regra mais frequentemente disparada este mês foi 'empty_shelf'. Este problema foi detetado em duas inspeções: INS_20260612_090422_008, em 2026-06-12, e INS_20260610_183302_001, em 2026-06-10. A regra 'other' foi detetada apenas uma vez, na inspeção INS_20260612_090701_017, em 2026-06-12.",
+        "n_sources": 3,
+        "cited_ids_not_in_sources": [],
+        "faithful": true,
+        "relevant": true
       }
     ]
-  }
+  },
+  "llm_judge": null
 }

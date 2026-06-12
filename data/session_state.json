@@ -1,4 +1,17 @@
 {
-  "last_inspection_id": "INS_20260610_183237_001",
-  "last_inspection_path": "C:\\Users\\inest\\programming\\CodePython\\MyModules\\PythonProject\\tp2\\data\\inspections\\INS_20260610_183237_001.json"
+  "last_inspection_id": "INS_20260612_113925_001",
+  "last_inspection_path": "C:\\Users\\inest\\programming\\CodePython\\MyModules\\PythonProject\\tp2\\data\\inspections\\INS_20260612_113925_001.json",
+  "loaded_rules": [
+    "RULE_001",
+    "RULE_003",
+    "RULE_004"
+  ],
+  "inspection_history": [
+    {
+      "inspection_id": "INS_20260612_113925_001",
+      "zone_id": "Z_S3",
+      "timestamp": "2026-06-12T11:39:25Z",
+      "path": "C:\\Users\\inest\\programming\\CodePython\\MyModules\\PythonProject\\tp2\\data\\inspections\\INS_20260612_113925_001.json"
+    }
+  ]
 }

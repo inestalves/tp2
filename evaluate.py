@@ -55,7 +55,7 @@ from shelf_inspector import analyze_image, QuotaManager, IMAGE_EXTENSIONS  # noq
 PROMPTS_DIR = ROOT_DIR / "prompts"
 EVALUATION_DIR = ROOT_DIR / "data" / "evaluation"
 GROUND_TRUTH_PATH = ROOT_DIR / "data" / "ground_truth.json"
-COMPARE_DIR = ROOT_DIR / "data" / "inspections" / "_compare"
+COMPARE_DIR = ROOT_DIR / "data" / "dev_artifacts" / "_compare"
 
 STRATEGY_COMPARISON_PATH = EVALUATION_DIR / "strategy_comparison.json"
 RAG_RECALL_PATH = EVALUATION_DIR / "rag_recall.json"

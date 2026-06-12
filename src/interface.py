@@ -1,31 +1,3 @@
-"""
-Componente 5: Interface Conversacional
-
-CLI unificada para o gestor de loja, que liga todos os componentes do
-sistema (Seccao 8 do enunciado):
-- shelf_inspector.py (analise visual de imagens)
-- rule_engine.py (regras de deteccao em linguagem natural)
-- rag_memory.py (memoria/historico semantico, com sintese LLM)
-- report_generator.py (relatorios de sessao em Markdown)
-
-Mantem um estado de sessao (data/session_state.json) com as regras
-carregadas e o historico de inspecoes feitas na sessao.
-
-Comandos:
-    python src/interface.py inspect Z_S3 --image shelf_photo.jpg
-    python src/interface.py inspect all --images-dir ./today_photos/
-    python src/interface.py add rule "Alertar sempre que o shelf_fill_rate for inferior a 70%"
-    python src/interface.py list rules
-    python src/interface.py delete rule RULE_003
-    python src/interface.py test rule RULE_001 --image shelf_photo.jpg
-    python src/interface.py history "Quando foi a ultima vez que a zona Z_S1 teve problemas de prateleira vazia?"
-    python src/interface.py compare Z_S1 Z_S3 --period "last 7 days"
-    python src/interface.py report --session today
-    python src/interface.py report --zone Z_S3 --period "last 14 days"
-
-Erros nunca sao apresentados como stack traces - apenas como mensagens
-amigaveis prefixadas por "Erro:".
-"""
 from __future__ import annotations
 
 import argparse
@@ -54,8 +26,6 @@ STATUS_LABELS = report_generator.STATUS_LABELS
 IMAGE_EXTENSIONS = shelf_inspector.IMAGE_EXTENSIONS
 
 # Zonas usadas para atribuir um zone_id as imagens em `inspect all
-# --images-dir`, quando o nome do ficheiro nao identifica a zona (atribuicao
-# round-robin, documentada no relatorio).
 ZONE_POOL = ["Z_S1", "Z_S2", "Z_S3", "Z_S4", "Z_S5"]
 
 
@@ -63,10 +33,7 @@ class CLIError(Exception):
     """Erro amigavel apresentado ao utilizador sem stack trace."""
 
 
-# --------------------------------------------------------------------------
-# Estado de sessao
-# --------------------------------------------------------------------------
-
+# estado de sessao
 def load_session() -> dict:
     if SESSION_PATH.exists():
         with open(SESSION_PATH, "r", encoding="utf-8") as f:
@@ -99,10 +66,7 @@ def record_inspection_in_session(session: dict, record: dict, path: Path) -> dic
     return session
 
 
-# --------------------------------------------------------------------------
 # Helpers
-# --------------------------------------------------------------------------
-
 def get_client() -> genai.Client | None:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -114,8 +78,6 @@ def get_client() -> genai.Client | None:
 
 
 def parse_period(period: str | None) -> tuple[datetime, datetime] | None:
-    """Converte 'today', 'last N days' ou 'last N weeks' num intervalo
-    (inicio, fim) em UTC. Devolve None se period for None."""
     if not period:
         return None
     p = period.strip().lower()
@@ -166,10 +128,7 @@ def load_all_records() -> list[dict]:
     return rag_memory.load_inspection_records()
 
 
-# --------------------------------------------------------------------------
 # Comandos: inspect
-# --------------------------------------------------------------------------
-
 def _save_record(record: dict) -> Path:
     INSPECTIONS_DIR.mkdir(parents=True, exist_ok=True)
     out_path = INSPECTIONS_DIR / f"{record['inspection_id']}.json"
@@ -246,10 +205,7 @@ def cmd_inspect(args: argparse.Namespace) -> None:
     save_session(session)
 
 
-# --------------------------------------------------------------------------
 # Comandos: rules
-# --------------------------------------------------------------------------
-
 def cmd_add_rule(args: argparse.Namespace) -> None:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -265,7 +221,7 @@ def cmd_add_rule(args: argparse.Namespace) -> None:
     if valid:
         print("  Validacao: sem ambiguidades detetadas.")
     else:
-        print("  Validacao: AMBIGUIDADES DETETADAS (regra nao sera aplicada ate ser corrigida):")
+        print("  Validacao: ambiguidades detetadas (regra nao sera aplicada ate ser corrigida):")
         for amb in rule["validation"].get("ambiguities", []):
             print(f"    - {amb}")
     assumptions = rule["validation"].get("assumptions") or []
@@ -322,15 +278,12 @@ def cmd_test_rule(args: argparse.Namespace) -> None:
           f"preenchimento={record.get('shelf_fill_rate')}, "
           f"issues={[i.get('type') for i in (record.get('issues') or [])]}")
     if evaluation["matched"]:
-        print(f"-> REGRA ACIONADA [{evaluation['alert_level']}]: {evaluation['notification_message']}")
+        print(f"- Regra Acionada[{evaluation['alert_level']}]: {evaluation['notification_message']}")
     else:
-        print("-> Regra nao acionada para esta imagem.")
+        print("- Regra nao acionada para esta imagem.")
 
 
-# --------------------------------------------------------------------------
 # Comandos: history (RAG)
-# --------------------------------------------------------------------------
-
 def cmd_history(args: argparse.Namespace) -> None:
     client = get_client()
     result = rag_memory.answer_query(args.query, k=args.n, strategy=args.strategy, client=client)
@@ -345,10 +298,8 @@ def cmd_history(args: argparse.Namespace) -> None:
         print("(Sem fontes - corre 'python src/rag_memory.py --index' se a memoria estiver vazia.)")
 
 
-# --------------------------------------------------------------------------
-# Comandos: compare
-# --------------------------------------------------------------------------
 
+# Comandos: compare
 def _zone_stats(records: list[dict]) -> dict:
     if not records:
         return {"n": 0, "avg_fill_rate": None, "status_counts": {}, "issue_counts": {}}
@@ -406,10 +357,7 @@ def cmd_compare(args: argparse.Namespace) -> None:
         print("\n(Sem inspecoes para nenhuma das duas zonas no periodo indicado.)")
 
 
-# --------------------------------------------------------------------------
 # Comandos: report
-# --------------------------------------------------------------------------
-
 def cmd_report(args: argparse.Namespace) -> None:
     if not args.session and not args.zone:
         raise CLIError("indica --session <today> ou --zone <ZONE> [--period <periodo>]")
@@ -431,10 +379,8 @@ def cmd_report(args: argparse.Namespace) -> None:
     print(f"Relatorio gerado em: {output_path} ({len(records)} inspecao(oes) incluidas)")
 
 
-# --------------------------------------------------------------------------
-# CLI
-# --------------------------------------------------------------------------
 
+# CLI
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Retail Vision Intelligence System - interface CLI")
     subparsers = parser.add_subparsers(dest="command")
