@@ -4,7 +4,7 @@ import shutil
 import numpy as np
 from PIL import Image, ImageFilter
 
-SRC_DIR = "data/images/raw_sku110k"
+SRC_DIR = "data/images/raw_data"
 OUT_BASE = "data/images"
 
 N_NORMAL = 150

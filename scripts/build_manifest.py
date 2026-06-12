@@ -1,11 +1,3 @@
-"""
-Constroi data/images/manifest.csv com uma linha por imagem do dataset de
-trabalho, documentando categoria, caminho, fonte e licenca - usado no
-relatorio (Seccao 3 - Dataset).
-
-Uso:
-    python scripts/build_manifest.py
-"""
 import csv
 import os
 
@@ -49,9 +41,7 @@ CATEGORIES = {
     },
 }
 
-# Imagens validadas individualmente pelo shelf_inspector (estrategia B,
-# Gemini) durante o smoke test, antes de se atingir o limite diario de
-# quota da API gratuita.
+# Imagens validadas individualmente pelo shelf_inspector (Gemini)
 LLM_VALIDATED = {
     "empty": {"train_1853.jpg", "train_4098.jpg", "train_5414.jpg", "train_6437.jpg"},
     "planogram_violation": {"train_3691.jpg", "train_4435.jpg"},

@@ -2,7 +2,6 @@ import argparse
 import io
 import os
 import tarfile
-
 import requests
 
 URL = "http://trax-geometry.s3.amazonaws.com/cvpr_challenge/SKU110K_fixed.tar.gz"
