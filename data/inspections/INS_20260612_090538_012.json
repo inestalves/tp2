@@ -1,0 +1,35 @@
+{
+  "inspection_id": "INS_20260612_090538_012",
+  "timestamp": "2026-06-12T09:05:38Z",
+  "image_path": "data\\images\\normal\\train_158.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira Nível 5, centro",
+      "severity": "low",
+      "description": "Pequeno espaço vazio no display, onde um ou dois produtos poderiam estar, indicando uma falha de stock mínima ou um ligeiro desalinhamento do display.",
+      "confidence": 0.95,
+      "affected_area_pct": 1.0
+    }
+  ],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Limas para pés",
+    "Removedores de calos elétricos",
+    "Palmilhas",
+    "Cremes para pés",
+    "Sprays desodorizantes para pés",
+    "Desodorizantes para sapatos",
+    "Separadores de dedos",
+    "Almofadas de gel para calcanhar",
+    "Protetores de calcanhar",
+    "Pensos para bolhas",
+    "Meias de compressão",
+    "Pó para pés"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe uma secção de prateleiras de retalho dedicada a produtos de 'Fußpflege' (cuidados para os pés), como indicado pela sinalética superior. O display é composto por seis níveis de prateleiras brancas, bem iluminadas, com uma vasta gama de produtos de marcas como Scholl, Credo, Balea, Compeed, Sixtus, Emcur e Kneipp. Os produtos predominantes incluem limas e removedores de calos (manuais e elétricos), palmilhas, cremes, sprays, desodorizantes para pés e sapatos, separadores de dedos, pensos para bolhas e outros acessórios de podologia.\n\n2. ANALISE ZONA A ZONA:\n    *   Prateleira Superior (Nível 1): Totalmente preenchida e bem organizada com limas e raspadores Credo e Balea, e palmilhas Scholl GelActiv.\n    *   Prateleira Nível 2: Totalmente preenchida e bem organizada com removedores de calos elétricos Scholl Velvet Smooth e recargas.\n    *   Prateleira Nível 3: Totalmente preenchida e bem organizada com sprays Sixtus, cremes e sprays Balea/Scholl, e produtos Balea 'LEGS'.\n    *   Prateleira Nível 4: Totalmente preenchida e bem organizada com removedores de calos elétricos Balea, separadores de dedos, almofadas de gel, protetores de calcanhar Balea, pensos Compeed e gel Emcur.\n    *   Prateleira Nível 5: Quase totalmente preenchida. Contém cremes e sprays Balea e Kneipp. Há um pequeno espaço vazio no centro, que parece ser uma falha de stock mínima ou um ajuste de display.\n    *   Prateleira Nível 6 (Inferior): Totalmente preenchida e bem organizada com sprays Scholl, sprays e pós Balea, e palmilhas Balea.\n    *   Nível do Chão: Não há produtos diretamente no chão; a prateleira inferior estende-se até à base.\n\n3. IDENTIFICACAO DE ANOMALIAS:\n    *   Anomalia 1: Pequeno espaço vazio na prateleira Nível 5, centro.\n        *   Tipo: empty_shelf\n        *   Localização: Prateleira Nível 5, centro\n        *   Severidade: low\n        *   Descrição: Um pequeno espaço onde um ou dois produtos poderiam estar, indicando uma falha de stock mínima ou um ligeiro desalinhamento do display.\n        *   Percentagem de área afetada: Aproximadamente 1% da área total da prateleira Nível 5.\n\n4. CLASSIFICACAO FINAL:\n    *   Overall Status: 'warning'. Embora a prateleira esteja em excelente estado geral, o pequeno espaço vazio identificado impede uma classificação de 'ok' perfeita. A anomalia é de baixa severidade e afeta uma área mínima.\n    *   Shelf Fill Rate: 0.98. A prateleira está quase completamente preenchida, com apenas uma área muito pequena sem produtos.",
+  "_strategy": "B"
+}

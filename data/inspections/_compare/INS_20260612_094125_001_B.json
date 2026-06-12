@@ -1,0 +1,16 @@
+{
+  "inspection_id": "INS_20260612_094125_001",
+  "timestamp": "2026-06-12T09:41:25Z",
+  "image_path": "data/images/empty/train_1425.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "escovas de dentes",
+    "kits de higiene oral infantil",
+    "enxaguante bucal"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de supermercado com varios niveis, predominantemente com produtos de higiene oral, como escovas de dentes infantis e kits de higiene oral, alem de enxaguantes bucais. Ha tres niveis visiveis de produtos.\n2. ANALISE ZONA A ZONA:\n- Prateleira Superior: A prateleira superior esta bem abastecida com embalagens de escovas de dentes infantis e kits de higiene oral. A organizacao parece boa, com poucos espacos vazios.\n- Prateleira Intermedia: Esta prateleira tambem esta bem abastecida com produtos similares aos da prateleira superior, incluindo escovas de dentes infantis e kits. A organizacao e boa.\n- Prateleira Inferior: A prateleira inferior contem principalmente enxaguantes bucais em embalagens de diferentes tamanhos e cores. A prateleira esta quase cheia, com alguns espacos vazios minimos.\n3. IDENTIFICACAO DE ANOMALIAS: Nao foram identificadas anomalias significativas em nenhuma das prateleiras. Os produtos estao organizados, nao ha produtos danificados visiveis, nem etiquetas em falta ou desalinhadas.\n4. CLASSIFICACAO FINAL: Com base na analise, a prateleira esta em bom estado geral, com um alto indice de preenchimento e sem problemas visiveis. O status geral e 'ok' e a taxa de preenchimento estimada e de 0.9.",
+  "_strategy": "B"
+}

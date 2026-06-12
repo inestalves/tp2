@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260612_090234_001",
+  "timestamp": "2026-06-12T09:02:34Z",
+  "image_path": "data\\images\\normal\\train_1066.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Dove body wash",
+    "Olay body wash",
+    "Nivea body wash",
+    "Aveeno body wash",
+    "Dove bar soap",
+    "Camay bar soap"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe uma prateleira de retalho bem iluminada, com aproximadamente 7 níveis visíveis. Os produtos predominantes são géis de banho e sabonetes em barra, principalmente das marcas Dove e Olay, com algumas garrafas de Aveeno e Nivea também visíveis. As prateleiras são brancas e o chão é de azulejos cinzentos.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (Nível 1): Completamente cheia com géis de banho Dove. Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   - Prateleira Intermédia (Nível 2): Completamente cheia com géis de banho Dove. Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   - Prateleira Intermédia (Nível 3): Completamente cheia com géis de banho Dove, Aveeno e Nivea. Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   - Prateleira Intermédia (Nível 4): Completamente cheia com géis de banho Dove. Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   - Prateleira Intermédia (Nível 5): Completamente cheia com géis de banho Dove e Olay. Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   - Prateleira Inferior (Nível 6): Completamente cheia com sabonetes em barra Dove (multi-packs). Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   - Prateleira Inferior (Nível 7): Completamente cheia com sabonetes em barra Dove e Camay (multi-packs). Os produtos estão bem organizados e alinhados. Etiquetas de preço visíveis.\n   Em geral, todas as prateleiras estão muito bem abastecidas, organizadas e os produtos estão alinhados. Não há espaços vazios significativos ou produtos danificados.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. As prateleiras estão cheias, os produtos estão corretamente posicionados e alinhados, e as etiquetas de preço estão presentes para a maioria dos produtos visíveis. Não há produtos danificados ou fora do lugar.\n4. CLASSIFICACAO FINAL: Com base na análise detalhada, a prateleira está em excelente estado. Não há problemas relevantes que justifiquem um 'warning' ou 'critical'. O preenchimento da prateleira é quase total.",
+  "_strategy": "B"
+}

@@ -1,0 +1,18 @@
+{
+  "inspection_id": "INS_20260612_090853_024",
+  "timestamp": "2026-06-12T09:08:53Z",
+  "image_path": "data\\images\\normal\\train_2089.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "oral hygiene",
+    "toothpaste",
+    "toothbrushes",
+    "mouthwash",
+    "whitening kits"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho dedicada a produtos de higiene oral, provavelmente num supermercado ou farmácia. Existem 5 níveis de prateleiras principais visíveis, além de uma área de exposição superior. Os produtos predominantes são pastas de dentes, escovas de dentes e elixires orais.\n2. ANALISE ZONA A ZONA:\n   - Área de exposição superior: Contém kits de branqueamento e outros produtos de higiene oral. Está cheia e bem organizada.\n   - Prateleira 1 (superior): Dedicada a escovas de dentes de várias marcas (Colgate, Gum, etc.). Está muito cheia, organizada e com etiquetas de preço visíveis. Há alguns itens promocionais (patinhos de borracha) pendurados, que parecem intencionais.\n   - Prateleira 2: Principalmente pastas de dentes Colgate (Optic White, Sensitive). Está cheia, bem organizada e com etiquetas de preço.\n   - Prateleira 3: Principalmente pastas de dentes Colgate (Radiant, Optic White, Complete Care, Advanced Deep Clean, Enamel Health). Está cheia, bem organizada e com etiquetas de preço.\n   - Prateleira 4: Principalmente pastas de dentes Colgate (Optic White, Radiant, Complete Care, Advanced Deep Clean, Enamel Health, Sensitive) e Sensodyne. Está cheia, bem organizada e com etiquetas de preço.\n   - Prateleira 5 (inferior, parcialmente visível): Contém pastas de dentes Colgate e Sensodyne. A parte visível está cheia e organizada.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Todas as prateleiras estão bem abastecidas, os produtos estão alinhados e organizados, e as etiquetas de preço estão presentes. Não há prateleiras vazias, produtos errados, danificados ou desalinhados de forma notória.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok'. A prateleira está excecionalmente bem abastecida e organizada, sem problemas visíveis. A taxa de preenchimento da prateleira é estimada em 0.98, indicando que está quase totalmente cheia.",
+  "_strategy": "B"
+}

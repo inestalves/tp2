@@ -1,0 +1,24 @@
+{
+  "inspection_id": "INS_20260612_090254_003",
+  "timestamp": "2026-06-12T09:02:54Z",
+  "image_path": "data\\images\\normal\\train_1106.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Olay",
+    "Enchanteur",
+    "Dettol",
+    "Lifebuoy",
+    "AVIO",
+    "艾叶神",
+    "Dove",
+    "Romano",
+    "Lux",
+    "盼月亮",
+    "Safeguard"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe uma seção de prateleiras de supermercado dedicada a produtos de higiene pessoal, principalmente sabonetes em barra e alguns sabonetes líquidos/loções corporais. Há 5 prateleiras principais visíveis, além de uma seção superior. As marcas predominantes incluem Olay, Enchanteur, Dettol, Lifebuoy, Dove, Lux, Safeguard, Romano e 艾叶神 (Ai Ye Shen).\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior: Bem abastecida e organizada com sabonetes Olay, AVIO, Enchanteur e 艾叶神.\n   - Prateleira 1 (de cima para baixo): Extremamente bem abastecida e organizada. Contém sabonetes Olay, Enchanteur, Dettol, Lifebuoy e Safeguard. Etiquetas de preço visíveis para a maioria dos produtos.\n   - Prateleira 2 (de cima para baixo): Muito bem abastecida e organizada. Inclui sabonetes líquidos Olay, sabonetes Dove, Romano, 艾叶神, Dettol e Lifebuoy. Algumas etiquetas de '상품품절' (Produto Esgotado) são visíveis, mas as prateleiras estão fisicamente cheias com produtos, não havendo espaços vazios.\n   - Prateleira 3 (de cima para baixo): Muito bem abastecida e organizada. Contém sabonetes líquidos Olay, sabonetes Lux, Dove, Romano, 艾叶神, Dettol e Lifebuoy. Etiquetas de preço visíveis.\n   - Prateleira 4 (de cima para baixo): Muito bem abastecida e organizada. Inclui sabonetes líquidos 盼月亮, sabonetes Lux, Dove, 艾叶神, Dettol, Lifebuoy e Safeguard. Etiquetas de preço visíveis.\n   - Prateleira Inferior (nível do chão): Bem abastecida e organizada com multipacks de Lifebuoy e Safeguard. Etiquetas de preço visíveis.\n   - Observações Gerais: Todas as prateleiras estão bem organizadas e os produtos estão empilhados de forma ordenada. Não há produtos tombados, danificados ou desalinhados de forma significativa. As etiquetas de preço estão presentes para quase todos os grupos de produtos visíveis.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Embora existam algumas etiquetas de '상품품절' (Produto Esgotado), as prateleiras correspondentes estão fisicamente cheias com outros produtos, o que significa que não há espaços vazios ou desorganização visível que justifique uma classificação de 'empty_shelf' ou 'misaligned'.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok'. O nível de preenchimento é muito alto, indicando uma excelente gestão de stock e organização. Não há problemas graves ou menores que afetem a apresentação ou disponibilidade dos produtos visíveis.",
+  "_strategy": "B"
+}

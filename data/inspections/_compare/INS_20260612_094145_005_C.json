@@ -1,0 +1,18 @@
+{
+  "inspection_id": "INS_20260612_094145_005",
+  "timestamp": "2026-06-12T09:41:45Z",
+  "image_path": "data/images/dirty/train_1291.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Tylenol",
+    "Aleve",
+    "Motrin",
+    "Excedrin",
+    "Bayer"
+  ],
+  "model_reasoning": "A prateleira está bem preenchida e organizada, com produtos alinhados e nas suas categorias corretas. Não foram detetados produtos fora de posição, embalagens danificadas, etiquetas em falta ou áreas vazias significativas. O fill rate é alto e não há problemas que justifiquem um status de 'warning' ou 'critical'.",
+  "_strategy": "C"
+}

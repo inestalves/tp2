@@ -1,0 +1,40 @@
+{
+  "inspection_id": "INS_20260611_151949_003",
+  "timestamp": "2026-06-11T15:19:49Z",
+  "image_path": "test_images\\train_1145.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "segunda prateleira, lado direito",
+      "severity": "medium",
+      "description": "Secção de fraldas Huggies com sinal de 'temporariamente esgotado' e espaço vazio, indicando falta de stock.",
+      "confidence": 0.9,
+      "affected_area_pct": 10.0
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "baby toys",
+    "nappy creams",
+    "general skin creams",
+    "teething gels",
+    "gripe water",
+    "infant pain relief",
+    "baby nappies",
+    "baby lotions",
+    "baby bath washes",
+    "baby shampoos",
+    "baby oils",
+    "baby powders",
+    "cotton wool",
+    "cotton buds",
+    "baby wipes",
+    "breast pads"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho com 4 níveis principais visíveis e uma parte de um quinto nível inferior. Os produtos predominantes são artigos de puericultura, incluindo produtos de higiene para bebé (loções, champôs, óleos, pós, algodão, toalhitas), alguns medicamentos para bebé e cremes gerais. \n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (Nível 1): Bem abastecida e organizada com brinquedos de bebé, cremes (Sudocrem, E45), gel para dentes, Gripe Water, Infacol, Calpol e Nurofen para crianças. \n   - Segunda Prateleira (Nível 2): Maioritariamente bem abastecida e organizada com produtos Johnson's, Infacare, E45, Baby Dove, Aveeno, Oilatum e Bio-Oil. No lado direito, há uma secção para fraldas Huggies com um sinal de 'Sorry Temporarily out of stock' e um espaço visivelmente vazio.\n   - Terceira Prateleira (Nível 3): Completamente abastecida e organizada com uma variedade de loções, banhos e champôs para bebé de várias marcas (Johnson's, Tesco Loves Baby, Childs Farm, Cussons Mum & Me).\n   - Quarta Prateleira (Nível 4): Completamente abastecida e organizada com pós de talco, algodão em discos e cotonetes, e toalhitas de bebé. Um sinal de 'Reduced to Clear' é visível, mas a prateleira está cheia.\n   - Prateleira Inferior (Nível 5 - parcial): Bem abastecida com discos de amamentação e rolos de algodão.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Anomalia 1: empty_shelf na segunda prateleira, lado direito. Severidade média. Descrição: Uma secção destinada a fraldas Huggies está vazia, com um sinal explícito de 'temporariamente esgotado'. Afeta aproximadamente 10% da área dessa prateleira. \n4. CLASSIFICACAO FINAL: O overall_status é 'warning' devido à anomalia de falta de stock na segunda prateleira, que é um problema operacional significativo. No entanto, a maioria das prateleiras está bem abastecida e organizada. O shelf_fill_rate global é estimado em 0.95, refletindo que a grande maioria do espaço está preenchida.",
+  "_strategy": "B",
+  "_from_cache": true
+}

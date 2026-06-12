@@ -1,0 +1,20 @@
+{
+  "inspection_id": "INS_20260611_152008_004",
+  "timestamp": "2026-06-11T15:20:08Z",
+  "image_path": "test_images\\train_1346.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "TRESemmé",
+    "Aussie",
+    "Man 'n Tail",
+    "Head & Shoulders",
+    "Herbal Essences",
+    "Nexus"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra um corredor de supermercado com prateleiras dedicadas a produtos de higiene pessoal, especificamente produtos para cabelo (shampoo, condicionador, sprays fixadores). Existem 5 níveis de prateleiras visíveis, além de uma secção superior com produtos. As marcas predominantes incluem TRESemmé, Aussie, Man 'n Tail, Head & Shoulders, Herbal Essences e Nexus. 2. ANALISE ZONA A ZONA: Todas as cinco prateleiras visíveis, desde a superior até à inferior, apresentam um estado de preenchimento muito elevado e excelente organização. Os produtos estão alinhados, em pé e agrupados por marca e tipo. Não há secções vazias ou parcialmente vazias. A prateleira superior exibe principalmente sprays fixadores e produtos de styling. As prateleiras intermédias e inferiores contêm maioritariamente shampoos e condicionadores. Não foram observados produtos tombados, danificados ou desorganizados. As etiquetas de preço estão presentes e visíveis para a maioria dos produtos. O chão abaixo da prateleira está limpo e sem produtos. 3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. As prateleiras estão bem abastecidas, organizadas e sem sinais de desordem, produtos em falta ou danificados. 4. CLASSIFICACAO FINAL: Com base na análise detalhada, o estado geral da prateleira é 'ok', dado o alto nível de preenchimento e organização. O shelf_fill_rate é estimado em 0.95, indicando que as prateleiras estão quase totalmente preenchidas.",
+  "_strategy": "B",
+  "_from_cache": true
+}

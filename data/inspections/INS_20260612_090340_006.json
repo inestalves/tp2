@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260612_090340_006",
+  "timestamp": "2026-06-12T09:03:40Z",
+  "image_path": "data\\images\\normal\\train_1200.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "L'Oréal Skincare",
+    "Olay Skincare",
+    "Garnier Skincare",
+    "Simple Skincare",
+    "Vaseline Skincare",
+    "Neutrogena Skincare"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho de produtos de cuidado da pele. Existem 6 níveis de prateleiras visíveis com produtos, além de uma área de display superior com posters promocionais. Os produtos predominantes são de marcas como L'Oréal, Olay e Neutrogena, abrangendo categorias como cremes faciais, loções, produtos de limpeza e séruns.\n2. ANALISE ZONA A ZONA:\n   - Área de Display Superior: Contém posters promocionais para L'Oréal Revitalift Laser Renew e Olay Re-Energise. Está bem organizada e sem anomalias.\n   - Prateleira 1 (Topo): Totalmente preenchida com produtos L'Oréal (caixas de cremes e séruns). Os produtos estão alinhados e os preços visíveis (£13, £12.95, £20.00, £13, £12, £15).\n   - Prateleira 2: Bem preenchida com produtos L'Oréal Fine Flowers (toalhitas, líquidos, cremes) e L'Oréal Pure Clay, L'Oréal Revitalift. Os produtos estão organizados e os preços visíveis (£2.50, £2.66, £2.20, £3, £3.90, £2, £5.20, £3.30, £13).\n   - Prateleira 3: Completamente preenchida com produtos Olay, L'Oréal Triple Active, L'Oréal Expert (45+, 35+) e L'Oréal Age Perfect. Todos os produtos estão alinhados e os preços claros (£15, £10, £11, £5, £1.65).\n   - Prateleira 4: Totalmente preenchida com produtos Olay e alguns Garnier. Os produtos estão bem dispostos. Um produto Olay no lado direito tem um autocolante 'SECURITY PROTECTED', que é uma medida de segurança e não uma anomalia. Preços visíveis (£30, £8, £10, £15, £4.50, £21, £25).\n   - Prateleira 5: Bem preenchida com toalhitas Olay, produtos Simple e uma variedade de cremes e séruns Olay, bem como produtos Vaseline. Os produtos estão organizados e os preços visíveis (£5, £2.50, £4.50, £10, £15).\n   - Prateleira 6 (Inferior): Completamente preenchida com produtos Olay Beauty Fluid e uma vasta gama de produtos Neutrogena Hydro Boost. Alguns produtos Neutrogena têm etiquetas 'Half Price' ou 'New £7', indicando promoções ou novos produtos, não anomalias. Preços visíveis (£10, £5.50, £7, £5, £8, £4, £12, £12.99).\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Todas as prateleiras estão bem abastecidas, os produtos estão alinhados, não há produtos danificados ou etiquetas em falta. As etiquetas 'Half Price' e 'New' são informativas e não indicam problemas.\n4. CLASSIFICACAO FINAL: O overall_status é 'ok' devido à excelente organização, ao alto nível de preenchimento e à ausência de quaisquer anomalias visíveis. O shelf_fill_rate global é estimado em 0.98, refletindo que as prateleiras estão quase totalmente preenchidas.",
+  "_strategy": "B"
+}

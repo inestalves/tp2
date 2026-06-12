@@ -1,0 +1,43 @@
+{
+  "inspection_id": "INS_20260612_090359_007",
+  "timestamp": "2026-06-12T09:03:59Z",
+  "image_path": "data\\images\\normal\\train_1237.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira 5, lado esquerdo",
+      "severity": "low",
+      "description": "Três espaços vazios para velas de pilar vermelhas.",
+      "confidence": 0.9,
+      "affected_area_pct": 15.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "prateleira 5, lado direito",
+      "severity": "low",
+      "description": "Dois espaços vazios para velas de pilar vermelhas.",
+      "confidence": 0.9,
+      "affected_area_pct": 10.0
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Room diffusers",
+    "Air fresheners",
+    "Essential oils",
+    "Lighters",
+    "Grill lighters",
+    "Pillar candles",
+    "Taper candles",
+    "Tealights",
+    "Scented candles",
+    "Birthday candles",
+    "Napkins"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho típica, provavelmente de um supermercado ou drogaria, com 6 níveis visíveis de produtos. Os produtos predominantes são velas de vários tipos (pilar, castiçal, tealights, perfumadas), difusores de ambiente, ambientadores e alguns acessórios como isqueiros e guardanapos. A prateleira está geralmente bem organizada e limpa.\n2. ANALISE ZONA A ZONA:\n   - Prateleira 1 (Superior): Bem abastecida e organizada com difusores de ambiente e isqueiros. Sem anomalias visíveis.\n   - Prateleira 2 (Segunda de cima): Bem abastecida e organizada com ambientadores, óleos essenciais e velas de pilar brancas. Sem anomalias visíveis.\n   - Prateleira 3 (Meio): Bem abastecida e organizada com várias velas brancas (pilar, castiçal) e guardanapos. Sem anomalias visíveis.\n   - Prateleira 4 (Quarta de cima): Bem abastecida e organizada com velas perfumadas em frascos, tealights de várias cores e um conjunto de velas de aniversário. Sem anomalias visíveis.\n   - Prateleira 5 (Segunda de baixo): Esta prateleira apresenta algumas falhas. No lado esquerdo, há 3 espaços vazios para velas de pilar vermelhas. No lado direito, há 2 espaços vazios para velas de pilar vermelhas. O resto da prateleira está bem abastecido com velas em frascos.\n   - Prateleira 6 (Inferior): Bem abastecida e organizada com packs de tealights e velas de pilar vermelhas e brancas. Sem anomalias visíveis.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Anomalia 1: empty_shelf na prateleira 5, lado esquerdo. Severidade baixa, com 3 espaços vazios para velas de pilar vermelhas, afetando aproximadamente 15% da área dessa secção.\n   - Anomalia 2: empty_shelf na prateleira 5, lado direito. Severidade baixa, com 2 espaços vazios para velas de pilar vermelhas, afetando aproximadamente 10% da área dessa secção.\n   Não foram identificados produtos danificados, produtos errados, desalinhamentos significativos ou etiquetas em falta.\n4. CLASSIFICACAO FINAL: O overall_status é 'warning' devido às pequenas secções vazias na prateleira 5. Embora a maioria das prateleiras esteja totalmente abastecida, as falhas existentes impedem uma classificação 'ok'. A severidade das anomalias é baixa e não representa um problema crítico. O shelf_fill_rate global é estimado em 0.95, refletindo que a grande maioria do espaço está preenchida.",
+  "_strategy": "B"
+}

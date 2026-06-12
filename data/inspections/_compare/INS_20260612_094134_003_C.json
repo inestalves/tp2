@@ -1,0 +1,16 @@
+{
+  "inspection_id": "INS_20260612_094134_003",
+  "timestamp": "2026-06-12T09:41:34Z",
+  "image_path": "data/images/normal/train_1066.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "sabonete liquido",
+    "sabonete em barra",
+    "loção corporal"
+  ],
+  "model_reasoning": "A prateleira está bem preenchida e organizada, com produtos dispostos de forma adequada. Não foram detetados produtos fora de lugar, embalagens danificadas, etiquetas em falta ou áreas vazias significativas. O estado geral é 'ok'.",
+  "_strategy": "C"
+}

@@ -1,0 +1,31 @@
+{
+  "inspection_id": "INS_20260612_090458_010",
+  "timestamp": "2026-06-12T09:04:58Z",
+  "image_path": "data\\images\\normal\\train_153.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Nivea Q10",
+    "Simple Micellar Water",
+    "Nivea Daily Essentials",
+    "Nivea Urban Skin Defence",
+    "Simple Hydrating Gel Cream",
+    "Nivea MicellAIR",
+    "Nivea Cleansing Milk",
+    "Nivea Exfoliating Scrub",
+    "Nivea Cleansing Cream",
+    "Nivea Cleansing Wipes",
+    "Garnier SkinActive UltraLift",
+    "Sainsbury's Skin products",
+    "Sainsbury's Fresh Faced Facial Wash",
+    "St. Ives Scrubs",
+    "St. Ives Lotions",
+    "Sainsbury's Cotton Pads",
+    "Boutique Cotton Pads",
+    "Sainsbury's Fresh Faced Facial Wipes"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe uma secção de prateleiras de retalho dedicada a produtos de cuidado da pele e higiene pessoal, predominantemente das marcas Nivea, Simple, Garnier e marcas próprias da Sainsbury's ('Skin' e 'Fresh Faced'). Existem 6 níveis de prateleiras visíveis, além de uma área de display superior com um banner promocional. As prateleiras estão, em geral, muito bem abastecidas e organizadas. 2. ANALISE ZONA A ZONA: Todas as seis prateleiras visíveis estão consistentemente bem abastecidas e organizadas. Não há espaços vazios significativos, produtos tombados ou desorganização. Os produtos estão alinhados e as etiquetas de preço são visíveis para a maioria dos itens. A prateleira superior apresenta produtos Nivea Q10 e Simple. A segunda prateleira contém Nivea Daily Essentials e Urban Skin Defence. A terceira prateleira exibe produtos de limpeza Nivea e toalhitas, bem como produtos Garnier UltraLift. A quarta prateleira continua com Garnier UltraLift e introduz as marcas próprias 'Skin' e 'Fresh Faced' da Sainsbury's. A quinta prateleira inclui mais produtos 'Skin', St. Ives e discos de algodão. A prateleira inferior está preenchida com toalhitas faciais 'Fresh Faced' e mais discos de algodão. 3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. As prateleiras estão em excelente estado de stock e organização. 4. CLASSIFICACAO FINAL: O overall_status é 'ok' devido ao excelente estado de abastecimento e organização das prateleiras. O shelf_fill_rate global é estimado em 0.98, refletindo um preenchimento quase perfeito sem falhas visíveis.",
+  "_strategy": "B"
+}

@@ -1,0 +1,55 @@
+{
+  "inspection_id": "INS_20260612_090517_011",
+  "timestamp": "2026-06-12T09:05:17Z",
+  "image_path": "data\\images\\normal\\train_1571.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira intermédia superior, lado esquerdo",
+      "severity": "low",
+      "description": "Pequeno espaço vazio na prateleira, ao lado da caixa Huggies, indicando falta de stock ou produto removido.",
+      "confidence": 0.9,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira intermédia superior, lado esquerdo/centro",
+      "severity": "low",
+      "description": "Pequenos potes de creme (Vaseline, Sudocrem) ligeiramente desalinhados na prateleira.",
+      "confidence": 0.9,
+      "affected_area_pct": 2.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "other",
+      "location": "prateleira intermédia superior, lado direito",
+      "severity": "low",
+      "description": "Expositor de 'Fun Sponge' pendurado que obscurece parcialmente os produtos atrás, dificultando a visibilidade e acesso.",
+      "confidence": 0.9,
+      "affected_area_pct": 5.0
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "baby wipes",
+    "baby lotion",
+    "baby shampoo",
+    "baby oil",
+    "baby powder",
+    "baby cream",
+    "baby medicine",
+    "cotton wool",
+    "breast pads",
+    "maternity towels",
+    "sterilizing fluid",
+    "gift cards (VISA, App Store & iTunes, Go Ape!, Toys R Us, Waterstones, Apple Music)",
+    "baby bath sponges",
+    "baby grooming kits"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma secção de prateleiras de retalho dedicada a produtos de puericultura e artigos relacionados. Existem quatro níveis de prateleiras principais visíveis, mais uma secção inferior ao nível do chão. Os produtos incluem toalhitas de bebé, loções, champôs, pós, óleos, alguns medicamentos para bebé e cartões-presente na extremidade direita. As prateleiras são de cor escura e a parede de fundo tem uma faixa azul-petróleo.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior: Bem abastecida com toalhitas, medicamentos e outros produtos de bebé. Transiciona para cartões-presente à direita.\n   - Prateleira Intermédia Superior: No lado esquerdo, há uma caixa Huggies e alguns potes de creme. Existe um pequeno espaço vazio ao lado da caixa Huggies. Os potes de creme estão ligeiramente desalinhados. No centro, há vários pacotes de toalhitas e pequenos frascos. No lado direito, há mais toalhitas, sabonetes e um expositor pendurado de esponjas em forma de sapo que obscurece produtos por trás, seguido por mais cartões-presente.\n   - Prateleira Intermédia Inferior: Bem abastecida com uma variedade de produtos Johnson's Baby (loções, champôs, óleos) em diferentes cores de frascos.\n   - Prateleira Inferior: Bem abastecida com toalhitas M&S e uma vasta gama de produtos Johnson's Baby. A extremidade direita transiciona para cartões-presente.\n   - Nível do Chão/Prateleira Mais Baixa: Bem abastecida com caixas de algodão, toalhas de maternidade, discos de amamentação, Milton e Napisan, e mais cartões-presente.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Anomalia 1 (empty_shelf): Na prateleira intermédia superior, lado esquerdo, há um pequeno espaço vazio ao lado da caixa Huggies. Severidade: low. Área afetada: ~5% da secção.\n   - Anomalia 2 (misaligned): Na prateleira intermédia superior, lado esquerdo/centro, os pequenos potes de creme (Vaseline, Sudocrem) estão ligeiramente desalinhados. Severidade: low. Área afetada: ~2% da secção.\n   - Anomalia 3 (other): Na prateleira intermédia superior, lado direito, o expositor pendurado de 'Fun Sponge' obscurece os produtos atrás dele, afetando a visibilidade e o acesso. Severidade: low. Área afetada: ~5% da secção.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'warning'. Não há problemas críticos como prateleiras totalmente vazias ou danos generalizados. No entanto, a presença de um pequeno espaço vazio, alguns produtos desalinhados e um expositor que obscurece outros produtos justificam um 'warning' em vez de 'ok'. A taxa de preenchimento da prateleira é estimada em 0.92, pois a maioria das prateleiras está bem abastecida.",
+  "_strategy": "B"
+}

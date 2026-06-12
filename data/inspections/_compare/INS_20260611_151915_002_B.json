@@ -1,0 +1,26 @@
+{
+  "inspection_id": "INS_20260611_151915_002",
+  "timestamp": "2026-06-11T15:19:15Z",
+  "image_path": "test_images\\train_111.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "McCafe K-Cups",
+    "Gevalia K-Cups",
+    "Maxwell House K-Cups",
+    "Green Mountain K-Cups",
+    "Twinings K-Cups",
+    "Laughing Man K-Cups",
+    "Dunkin' K-Cups",
+    "Cafe Escapes K-Cups",
+    "Donut Shop K-Cups",
+    "Swiss Miss Hot Cocoa K-Cups",
+    "Keurig Hot Variety Pack",
+    "Pepsi"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de gôndola típica de supermercado, com 7 níveis principais de exposição de produtos, uma secção inferior com embalagens maiores e uma secção superior para armazenamento e sinalização de corredor. Os produtos predominantes são cápsulas de café (K-Cups) e cacau quente, com algumas bebidas (Pepsi) e caixas de armazenamento visíveis na parte superior. \n2. ANALISE ZONA A ZONA: \n   - Secção Superior: Contém sinais de corredor ('Baby', 'Pasta', 'Soup', 'Spices', 'Gelatin', 'Cake Mix', 'Rice'), uma caixa de cartão castanha e uma caixa grande de Pepsi. Esta secção é usada para armazenamento e sinalização, e está organizada para o seu propósito. \n   - Prateleiras 1 a 7 (principais de K-Cups): Todas as sete prateleiras de exposição de K-Cups estão completamente cheias e bem organizadas. Os produtos estão alinhados, virados para a frente e as etiquetas de preço de $2.00 são visíveis em cada nível. As marcas incluem McCafe, Gevalia, Maxwell House, Green Mountain, Twinings, Laughing Man, Dunkin', Cafe Escapes, Donut Shop e Swiss Miss. \n   - Secção Inferior: Contém embalagens maiores de Keurig Hot Variety Packs (Medium Roast, Flavored Coffee). Esta secção também está bem abastecida e organizada, com o preço de $29.87 visível para uma das embalagens. \n   - Corredor à direita: Um corredor adjacente com produtos enlatados ou similares é visível e parece bem abastecido. \n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Todas as prateleiras estão bem abastecidas, os produtos estão organizados, não há espaços vazios visíveis, produtos danificados ou etiquetas em falta nas áreas de exposição primária. \n4. CLASSIFICACAO FINAL: O overall_status é 'ok' devido ao excelente estado de abastecimento e organização das prateleiras. O shelf_fill_rate global é estimado em 0.97, refletindo a quase totalidade dos espaços de exposição preenchidos.",
+  "_strategy": "B",
+  "_from_cache": true
+}

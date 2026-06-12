@@ -1,0 +1,16 @@
+{
+  "inspection_id": "INS_20260612_094231_012",
+  "timestamp": "2026-06-12T09:42:31Z",
+  "image_path": "data/images/empty/train_1425.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "escovas de dentes",
+    "embalagens de produtos de higiene oral",
+    "embalagens de produtos de limpeza"
+  ],
+  "model_reasoning": "A prateleira está bem preenchida e organizada. A maioria dos produtos está alinhada e nas suas posições corretas. Não foram detetados produtos fora de lugar, danificados ou com etiquetas em falta. Existe uma pequena área vazia na prateleira superior, mas é insignificante e não afeta o estado geral da prateleira. Portanto, o estado geral é 'ok'.",
+  "_strategy": "C"
+}

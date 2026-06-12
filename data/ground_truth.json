@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Ground truth definido manualmente (inspecao visual humana) para 15 imagens reais do SKU-110K, usado para comparar as estrategias de prompting A/B/C do shelf_inspector. As categorias de pasta (normal/dirty/ambiguous/empty/planogram_violation) refletem a heuristica usada para construir o dataset (Seccao 3), mas o ground truth aqui baseia-se exclusivamente no conteudo visual real de cada imagem.",
+    "description": "Ground truth definido manualmente para 15 imagens reais do dataset, usado para comparar as estrategias de prompting A/B/C do shelf_inspector.",
     "issue_types": ["empty_shelf", "wrong_product", "damaged", "misaligned", "label_missing", "other"],
     "severities": ["low", "medium", "high"]
   },

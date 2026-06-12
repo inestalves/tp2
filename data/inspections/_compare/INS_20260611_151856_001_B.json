@@ -1,0 +1,58 @@
+{
+  "inspection_id": "INS_20260611_151856_001",
+  "timestamp": "2026-06-11T15:18:56Z",
+  "image_path": "test_images\\train_106.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "Porta central, prateleira superior, lado direito",
+      "severity": "low",
+      "description": "Pequena falha de stock, espaço para 1-2 garrafas.",
+      "confidence": 0.95,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "Porta central, quinta prateleira, lado direito",
+      "severity": "low",
+      "description": "Pequena falha de stock, espaço para 1-2 garrafas.",
+      "confidence": 0.95,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "Porta direita, prateleira superior, lado esquerdo",
+      "severity": "low",
+      "description": "Pequena falha de stock, espaço para 1-2 garrafas.",
+      "confidence": 0.95,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "empty_shelf",
+      "location": "Porta direita, quinta prateleira, lado direito",
+      "severity": "low",
+      "description": "Pequena falha de stock, espaço para 1-2 garrafas.",
+      "confidence": 0.95,
+      "affected_area_pct": 5.0
+    }
+  ],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Soft Drinks",
+    "Juices",
+    "Teas",
+    "Coffee Drinks",
+    "Energy Drinks",
+    "Protein Drinks",
+    "Breakfast Items (advertised)"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra três portas de um expositor refrigerado de retalho, com seis níveis de prateleiras visíveis em cada porta. Os produtos predominantes são bebidas, incluindo refrigerantes, sumos, chás, bebidas energéticas e cafés engarrafados. Há também publicidade para produtos alimentares (muffins). 2. ANALISE ZONA A ZONA: Porta 1 (Esquerda - '12 PACK POP'): As prateleiras estão bem abastecidas com garrafas grandes de refrigerantes (Mountain Dew, Dr. Pepper) e caixas de 12 unidades de várias marcas (Pepsi, Coca-Cola, Sprite, Dr. Pepper, Fanta, A&W, 7UP). O preenchimento é alto, com poucas ou nenhumas falhas visíveis. Porta 2 (Centro - 'TEA & JUICE'): As prateleiras estão maioritariamente cheias com chás e sumos engarrafados (Lipton, Pure Leaf, Snapple) e bebidas de café/proteína (Starbucks, Core Power). Existem pequenas falhas de stock na prateleira superior direita e na quinta prateleira direita, onde faltam 1-2 garrafas. Porta 3 (Direita - 'TEA & JUICE'): Similar à porta central, as prateleiras estão bem abastecidas com chás, sumos e bebidas de café/proteína. Existem pequenas falhas de stock na prateleira superior esquerda e na quinta prateleira direita. Observações Gerais: A organização geral é boa, os produtos estão maioritariamente alinhados e as etiquetas de preço estão visíveis. Não há produtos danificados ou tombados em grande número. 3. IDENTIFICACAO DE ANOMALIAS: Anomalia 1: Pequena falha de stock na porta central, prateleira superior, lado direito. Tipo: empty_shelf. Severidade: low. Descrição: Espaço para 1-2 garrafas. Área afetada: ~5%. Anomalia 2: Pequena falha de stock na porta central, quinta prateleira, lado direito. Tipo: empty_shelf. Severidade: low. Descrição: Espaço para 1-2 garrafas. Área afetada: ~5%. Anomalia 3: Pequena falha de stock na porta direita, prateleira superior, lado esquerdo. Tipo: empty_shelf. Severidade: low. Descrição: Espaço para 1-2 garrafas. Área afetada: ~5%. Anomalia 4: Pequena falha de stock na porta direita, quinta prateleira, lado direito. Tipo: empty_shelf. Severidade: low. Descrição: Espaço para 1-2 garrafas. Área afetada: ~5%. 4. CLASSIFICACAO FINAL: O estado geral é 'warning' devido às pequenas e isoladas falhas de stock em algumas prateleiras, que não comprometem significativamente a disponibilidade dos produtos. O preenchimento global das prateleiras é elevado, estimado em 98%.",
+  "_strategy": "B",
+  "_from_cache": true
+}

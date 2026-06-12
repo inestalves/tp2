@@ -1,0 +1,23 @@
+{
+  "inspection_id": "INS_20260612_094139_004",
+  "timestamp": "2026-06-12T09:41:39Z",
+  "image_path": "data/images/normal/train_1098.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "analgesicos",
+    "cuidados com a pele",
+    "higiene pessoal",
+    "saude feminina",
+    "tratamento de infeccoes",
+    "tratamento de alergias",
+    "tratamento de constipacoes e gripes",
+    "tratamento de dores de garganta",
+    "tratamento de problemas oculares",
+    "tratamento de problemas de pele"
+  ],
+  "model_reasoning": "A prateleira esta bem organizada e preenchida, com a maioria dos produtos alinhados corretamente. Nao foram detetados produtos fora de lugar, danificados ou com etiquetas em falta. Existe uma pequena zona vazia na prateleira superior direita, mas esta nao afeta significativamente o preenchimento geral da prateleira. Por isso, o estado geral e 'ok'.",
+  "_strategy": "C"
+}

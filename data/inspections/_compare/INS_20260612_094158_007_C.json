@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260612_094158_007",
+  "timestamp": "2026-06-12T09:41:58Z",
+  "image_path": "data/images/ambiguous/train_1007.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "cuidados com os pes",
+    "cremes para os pes",
+    "pensos para os pes",
+    "meias de compressao",
+    "aparelhos para os pes",
+    "sapatos"
+  ],
+  "model_reasoning": "A prateleira esta bem preenchida e organizada. Todos os produtos estao nas suas respetivas localizacoes e as embalagens estao em bom estado. Nao foram detetados problemas significativos que justifiquem um estado de 'warning' ou 'critical'. O fill rate e elevado, indicando boa gestao de stock.",
+  "_strategy": "C"
+}

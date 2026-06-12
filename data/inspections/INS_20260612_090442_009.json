@@ -1,0 +1,111 @@
+{
+  "inspection_id": "INS_20260612_090442_009",
+  "timestamp": "2026-06-12T09:04:42Z",
+  "image_path": "data\\images\\normal\\train_1512.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "prateleira superior, porta esquerda, centro",
+      "severity": "low",
+      "description": "Garrafas de água transparentes ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 10.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "segunda prateleira, porta esquerda, centro/direita",
+      "severity": "low",
+      "description": "Garrafas Good2Grow e latas de bebidas ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 15.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "terceira prateleira, porta esquerda, centro/direita",
+      "severity": "low",
+      "description": "Garrafas Good2Grow ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 15.0
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "quarta prateleira, porta esquerda, centro/direita",
+      "severity": "low",
+      "description": "Latas e garrafas Monster ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 10.0
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "misaligned",
+      "location": "prateleira inferior, porta esquerda, centro/direita",
+      "severity": "low",
+      "description": "Garrafas Simply Lemonade e outras bebidas ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 15.0
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "misaligned",
+      "location": "terceira prateleira, porta direita, lado esquerdo",
+      "severity": "low",
+      "description": "Latas La Croix ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_007",
+      "type": "misaligned",
+      "location": "quarta prateleira, porta direita, centro/direita",
+      "severity": "low",
+      "description": "Garrafas Bai e ICE ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 10.0
+    },
+    {
+      "issue_id": "ISS_008",
+      "type": "other",
+      "location": "quarta prateleira, porta direita, centro",
+      "severity": "low",
+      "description": "Etiqueta de preço 'Sale 1.67' pendurada, obstruindo parcialmente os produtos.",
+      "confidence": 1.0,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_009",
+      "type": "misaligned",
+      "location": "prateleira inferior, porta direita, centro/direita",
+      "severity": "low",
+      "description": "Garrafas Pure Leaf e Starbucks ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 10.0
+    },
+    {
+      "issue_id": "ISS_010",
+      "type": "other",
+      "location": "prateleira inferior, porta direita, centro",
+      "severity": "low",
+      "description": "Etiqueta de preço 'Sale 1.25' pendurada, obstruindo parcialmente os produtos.",
+      "confidence": 1.0,
+      "affected_area_pct": 5.0
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "Water",
+    "Energy Drinks",
+    "Sparkling Water",
+    "Juices",
+    "Flavored Drinks",
+    "Iced Coffee",
+    "Sports Drinks"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe um frigorífico de exposição de duas portas, com cinco prateleiras visíveis em cada porta, totalizando dez prateleiras. O frigorífico está abastecido com uma variedade de bebidas, incluindo água engarrafada, bebidas energéticas (Red Bull, Monster), água com gás (La Croix), sumos (Simply Lemonade, Good2Grow), bebidas aromatizadas (Bai, ICE, DRY), e cafés gelados (Starbucks, High Brew, Pure Leaf). Há etiquetas de preço visíveis para a maioria dos produtos.\n2. ANALISE ZONA A ZONA:\n   - Porta Esquerda, Prateleira Superior: Garrafas de água transparentes e Fiji. Bem abastecida, mas as garrafas transparentes estão um pouco desorganizadas.\n   - Porta Esquerda, Segunda Prateleira: Garrafas Good2Grow e algumas latas (Heineken 0.0, água com gás). Bem abastecida, alguns itens ligeiramente desalinhados.\n   - Porta Esquerda, Terceira Prateleira: Mais garrafas Good2Grow e outras bebidas engarrafadas. Bem abastecida, alguns itens ligeiramente desalinhados.\n   - Porta Esquerda, Quarta Prateleira: Bebidas energéticas Monster (latas e garrafas), algumas outras bebidas engarrafadas (Nestle). Maioritariamente cheia, alguns itens ligeiramente desalinhados.\n   - Porta Esquerda, Prateleira Inferior: Bebidas espumantes (DRY), Simply Lemonade/Orangeade e outras pequenas bebidas engarrafadas. Maioritariamente cheia, alguns itens ligeiramente desalinhados.\n   - Porta Direita, Prateleira Superior: Bebidas energéticas Red Bull. Muito bem abastecida e organizada.\n   - Porta Direita, Segunda Prateleira: Bebidas energéticas Red Bull (várias edições). Muito bem abastecida e organizada.\n   - Porta Direita, Terceira Prateleira: Bebidas energéticas Red Bull (várias edições), bebidas BodyArmor, água com gás La Croix. Bem abastecida, algumas latas La Croix ligeiramente desalinhadas.\n   - Porta Direita, Quarta Prateleira: Bebidas Bai antioxidant infusion, água com gás ICE. Bem abastecida, alguns itens ligeiramente desalinhados. Uma etiqueta 'Sale 1.67' está pendurada, obstruindo parcialmente os produtos.\n   - Porta Direita, Prateleira Inferior: Chá gelado Pure Leaf, café engarrafado Starbucks, café High Brew. Bem abastecida, alguns itens ligeiramente desalinhados. Uma etiqueta 'Sale 1.25' está pendurada.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Porta Esquerda, Prateleira Superior: Misaligned (low severity, 10% affected) - garrafas de água desalinhadas.\n   - Porta Esquerda, Segunda Prateleira: Misaligned (low severity, 15% affected) - garrafas Good2Grow e latas desalinhadas.\n   - Porta Esquerda, Terceira Prateleira: Misaligned (low severity, 15% affected) - garrafas Good2Grow desalinhadas.\n   - Porta Esquerda, Quarta Prateleira: Misaligned (low severity, 10% affected) - latas/garrafas Monster desalinhadas.\n   - Porta Esquerda, Prateleira Inferior: Misaligned (low severity, 15% affected) - garrafas Simply Lemonade e outras desalinhadas.\n   - Porta Direita, Terceira Prateleira: Misaligned (low severity, 5% affected) - latas La Croix desalinhadas.\n   - Porta Direita, Quarta Prateleira: Misaligned (low severity, 10% affected) - garrafas Bai e ICE desalinhadas. Other (low severity, 5% affected) - etiqueta 'Sale 1.67' obstruindo produtos.\n   - Porta Direita, Prateleira Inferior: Misaligned (low severity, 10% affected) - garrafas Pure Leaf e Starbucks desalinhadas. Other (low severity, 5% affected) - etiqueta 'Sale 1.25' obstruindo produtos.\n   Não foram identificadas prateleiras vazias, produtos errados, danificados ou etiquetas em falta.\n4. CLASSIFICACAO FINAL: O status geral é 'warning' devido à presença de múltiplas anomalias de desalinhamento de baixa severidade em quase todas as prateleiras e duas etiquetas de preço que obstruem parcialmente os produtos. Embora não haja problemas críticos, a frequência dos pequenos desalinhamentos justifica um aviso. A taxa de preenchimento da prateleira é estimada em 0.92, indicando que as prateleiras estão muito bem abastecidas.",
+  "_strategy": "B"
+}

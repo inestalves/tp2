@@ -1,0 +1,87 @@
+{
+  "inspection_id": "INS_20260612_090310_004",
+  "timestamp": "2026-06-12T09:03:10Z",
+  "image_path": "data\\images\\normal\\train_1138.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "prateleira 3, centro-direita",
+      "severity": "low",
+      "description": "Algumas garrafas de gel de banho Dial estão ligeiramente desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira 4, esquerda e centro",
+      "severity": "low",
+      "description": "Várias caixas de sabonete Dove e Olay estão ligeiramente tortas ou não perfeitamente empilhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 10.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "empty_shelf",
+      "location": "prateleira 4, centro",
+      "severity": "low",
+      "description": "Pequena lacuna na secção de sabonetes Olay, sugerindo a falta de uma ou duas caixas.",
+      "confidence": 1.0,
+      "affected_area_pct": 1.0
+    },
+    {
+      "issue_id": "ISS_004",
+      "type": "misaligned",
+      "location": "prateleira 5, centro e direita",
+      "severity": "low",
+      "description": "Caixas de sabonete Olay (roxo) e Dial (azul) estão ligeiramente desalinhadas ou desorganizadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 15.0
+    },
+    {
+      "issue_id": "ISS_005",
+      "type": "empty_shelf",
+      "location": "prateleira 5, canto direito",
+      "severity": "low",
+      "description": "Pequena lacuna na secção de sabonetes Lever/Coast, indicando a falta de algumas unidades.",
+      "confidence": 1.0,
+      "affected_area_pct": 2.0
+    },
+    {
+      "issue_id": "ISS_006",
+      "type": "other",
+      "location": "prateleira 5, vários pontos",
+      "severity": "low",
+      "description": "Algumas etiquetas de preço estão ligeiramente tortas ou desalinhadas.",
+      "confidence": 1.0,
+      "affected_area_pct": 1.0
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Olay Body Wash",
+    "Ivory Body Wash",
+    "Body Exfoliating Sponge",
+    "Aveeno Body Wash",
+    "Equate Body Wash",
+    "Suave Body Wash",
+    "St. Ives Body Wash",
+    "Caress Body Wash",
+    "Softsoap Body Wash",
+    "Dial Body Wash",
+    "Dove Bar Soap",
+    "Olay Bar Soap",
+    "Caress Bar Soap",
+    "Tone Bar Soap",
+    "Dial Bar Soap",
+    "Yardley Bar Soap",
+    "Kirk's Castile Bar Soap",
+    "Lever Bar Soap",
+    "Coast Bar Soap"
+  ],
+  "model_reasoning": "1. DESCRIÇÃO GERAL: A imagem exibe uma secção de prateleiras de retalho com 5 níveis, predominantemente preenchida com produtos de higiene pessoal, especificamente gel de banho nas prateleiras superiores e sabonetes em barra nas prateleiras inferiores. 2. ANÁLISE ZONA A ZONA: A prateleira superior e a segunda prateleira de cima estão bem preenchidas e organizadas, sem anomalias significativas. A prateleira do meio apresenta algumas garrafas de gel de banho Dial ligeiramente desalinhadas. A segunda prateleira de baixo mostra várias caixas de sabonete Dove e Olay desalinhadas e uma pequena lacuna na secção Olay. A prateleira inferior tem caixas de sabonete Olay e Dial desalinhadas, uma pequena lacuna na secção Lever/Coast e algumas etiquetas de preço tortas. 3. IDENTIFICAÇÃO DE ANOMALIAS: Foram identificadas anomalias de 'misaligned' (desalinhamento) em várias prateleiras (prateleira 3, 4 e 5) com severidade 'low' e percentagens de área afetada entre 5% e 15%. Duas pequenas lacunas ('empty_shelf') foram notadas nas prateleiras 4 e 5, ambas com severidade 'low' e percentagens de área afetada muito baixas (1-2%). Algumas etiquetas de preço tortas ('other') foram observadas na prateleira 5 com severidade 'low'. Não foram detetados produtos errados ou danificados. 4. CLASSIFICAÇÃO FINAL: O 'overall_status' é 'warning' devido à presença de múltiplas anomalias menores de desalinhamento e pequenas lacunas, que, embora não sejam graves, indicam uma necessidade de organização e reabastecimento pontual. O 'shelf_fill_rate' global é estimado em 0.95, pois a maioria das prateleiras está bem abastecida.",
+  "_strategy": "B"
+}

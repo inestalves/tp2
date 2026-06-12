@@ -1,0 +1,29 @@
+{
+  "inspection_id": "INS_20260612_090729_020",
+  "timestamp": "2026-06-12T09:07:29Z",
+  "image_path": "data\\images\\normal\\train_1928.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "L'Oreal skincare",
+    "Super Facialist skincare",
+    "Balance Me skincare",
+    "Bio-Oil",
+    "Nivea Soft cream",
+    "C.A.E. Hydrating Cream",
+    "Source of Nature facial wipes",
+    "Burt's Bees products",
+    "Neutrogena Hydro Boost",
+    "Garnier Micellar water",
+    "Aveeno lotions",
+    "Korres body care",
+    "Cetaphil cleansers",
+    "E45 lotions",
+    "Palmer's lotions",
+    "Skin body care"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma secção de prateleiras de retalho dedicada a produtos de cuidado pessoal e beleza. Existem 6 níveis de prateleiras visíveis com produtos, além de uma secção superior com material promocional. Os produtos predominantes são cremes, loções, águas micelares, máscaras faciais e outros produtos de skincare e body care. \n2. ANALISE ZONA A ZONA: \n   - Prateleira 1 (Superior): Bem abastecida e organizada com produtos L'Oreal e Super Facialist. Preços visíveis. \n   - Prateleira 2: Bem abastecida e organizada com produtos L'Oreal Age Perfect, Balance Me, Bio-Oil e Nivea Soft. Preços visíveis. \n   - Prateleira 3: Bem abastecida e organizada com águas micelares L'Oreal, toalhitas Source of Nature e produtos Burt's Bees e Nivea. Preços visíveis. \n   - Prateleira 4: Bem abastecida e organizada com produtos Neutrogena Hydro Boost, Garnier Micellar, Aveeno e Korres/Cetaphil. Um sinal 'NEW' está presente. Preços visíveis. \n   - Prateleira 5: Bem abastecida e organizada com produtos E45, Cetaphil, Nivea, C.A.E. e Aveeno. Preços visíveis. \n   - Prateleira 6 (Inferior): Bem abastecida e organizada com produtos E45, Palmer's, Neutrogena e Nivea. Preços visíveis. \n   Todas as prateleiras estão cheias, os produtos estão alinhados e virados para a frente, e as etiquetas de preço estão presentes e legíveis. \n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Não há prateleiras vazias, produtos errados, danificados, desalinhados ou etiquetas em falta. A organização geral é excelente. \n4. CLASSIFICACAO FINAL: O estado geral é 'ok' devido à ausência de problemas. A taxa de preenchimento da prateleira é estimada em 0.98, indicando que as prateleiras estão quase totalmente cheias.",
+  "_strategy": "B"
+}

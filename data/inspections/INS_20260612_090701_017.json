@@ -1,0 +1,42 @@
+{
+  "inspection_id": "INS_20260612_090701_017",
+  "timestamp": "2026-06-12T09:07:01Z",
+  "image_path": "data\\images\\normal\\train_1873.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "other",
+      "location": "prateleira superior intermédia, centro",
+      "severity": "low",
+      "description": "Dois 'bath poufs' amarelos estão pendurados na borda da prateleira, não sendo produtos primários da secção.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.01
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "L'Oréal Elvive",
+    "L'Oréal EverPure",
+    "L'Oréal Lock It",
+    "Pantene Hairspray",
+    "Pantene Styling Products",
+    "Pantene Curl Defining Mousse",
+    "L'Oréal Triple Resist",
+    "L'Oréal Color Vive",
+    "L'Oréal Power Moisture",
+    "Pantene Expert",
+    "Pantene Color",
+    "Pantene Moisture",
+    "Pantene Repair",
+    "L'Oréal Volume Filler",
+    "Gliss Shampoo",
+    "Gliss Conditioner",
+    "Gliss Hairspray",
+    "Pantene Clear",
+    "Pantene Volume"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho típica de supermercado ou farmácia, com fundo perfurado. São visíveis 4 níveis de prateleiras principais, mais uma pequena porção de um quinto nível na parte inferior. Os produtos predominantes são de cuidado capilar, incluindo shampoos, condicionadores, lacas, mousses e cremes de styling, das marcas L'Oréal, Pantene e Gliss.\n\n2. ANALISE ZONA A ZONA:\n   - Prateleira 1 (Superior): A secção esquerda, central e direita estão bem preenchidas com produtos L'Oréal (frascos azuis/verdes e sprays pretos) e Pantene (sprays dourados e frascos brancos). Os produtos estão organizados e alinhados. O preenchimento é alto.\n   - Prateleira 2 (Superior Intermédia): A secção esquerda, central e direita estão bem preenchidas com produtos L'Oréal (frascos azuis, amarelos, pretos e vermelhos) e Pantene (frascos pretos e brancos). Dois 'bath poufs' amarelos estão pendurados na borda da prateleira na secção central. Os produtos estão organizados e alinhados. O preenchimento é alto.\n   - Prateleira 3 (Inferior Intermédia): A secção esquerda, central e direita estão bem preenchidas com produtos L'Oréal (frascos amarelos, azuis e vermelhos) e Pantene (frascos brancos). Os produtos estão organizados e alinhados. O preenchimento é alto.\n   - Prateleira 4 (Inferior Visível): A secção esquerda, central e direita estão bem preenchidas com produtos L'Oréal (tubos bege e frascos roxos), Gliss (frascos pretos, pequenos sprays e frascos brancos) e Pantene (frascos brancos e transparentes). Os produtos estão organizados e alinhados. O preenchimento é alto.\n   - Observações Gerais: As etiquetas de preço estão presentes para a maioria dos produtos. Os produtos estão maioritariamente na vertical e virados para a frente. Não há espaços vazios significativos.\n\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Anomalia 1: Na prateleira superior intermédia, na secção central, dois 'bath poufs' amarelos estão pendurados na borda da prateleira. Embora não sejam um problema de stock ou organização dos produtos principais, são um item 'outro' que não faz parte do alinhamento regular dos produtos de cuidado capilar. A severidade é baixa, pois não impede o acesso aos produtos nem indica um problema estrutural. A área afetada é mínima, cerca de 1% da área da prateleira.\n\n4. CLASSIFICACAO FINAL:\n   - Overall Status: 'ok'. Apesar da presença dos 'bath poufs' pendurados, as prateleiras estão excecionalmente bem abastecidas, organizadas e limpas. Não há prateleiras vazias, produtos danificados, desalinhados de forma significativa ou etiquetas em falta que justifiquem um estado de 'warning' ou 'critical'.\n   - Shelf Fill Rate: 0.95. A grande maioria do espaço visível da prateleira está ocupada por produtos, indicando um nível de preenchimento muito elevado.",
+  "_strategy": "B"
+}

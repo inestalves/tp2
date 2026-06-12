@@ -1,0 +1,36 @@
+{
+  "inspection_id": "INS_20260612_090647_016",
+  "timestamp": "2026-06-12T09:06:47Z",
+  "image_path": "data\\images\\normal\\train_1824.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "prateleira 2, lado esquerdo",
+      "severity": "low",
+      "description": "Algumas esponjas coloridas penduradas estão ligeiramente desalinhadas ou sobrepostas.",
+      "confidence": 0.9,
+      "affected_area_pct": 5.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira 3, centro",
+      "severity": "low",
+      "description": "Uma embalagem roxa está tombada ou mal posicionada atrás de outros produtos, com baixa visibilidade.",
+      "confidence": 0.9,
+      "affected_area_pct": 1.0
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "Higiene para bebé (champôs, loções, sabonetes, cremes)",
+    "Medicamentos para bebé (analgésicos, xaropes, cremes para assaduras)",
+    "Acessórios para bebé (termómetros, escovas, esponjas, algodão)",
+    "Produtos de cuidado da pele (cremes hidratantes)"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho dedicada a produtos de bebé e higiene/saúde infantil, com um total de 6 níveis visíveis (5 de venda e 1 superior de stock). Os produtos predominantes incluem champôs, loções, cremes para assaduras, medicamentos infantis, e acessórios como termómetros e esponjas.\n2. ANALISE ZONA A ZONA:\n   * Prateleira Superior (Stock): Cheia e organizada com caixas de produtos e embalagens de stock, claramente identificada como área de stock adicional.\n   * Prateleira 1 (Topo - Venda): Cheia e bem organizada com produtos de marcas como Johnson's Baby, Aveeno Baby, Infacare, Childs Farm, Johnson's Baby Naturals e Palmer's.\n   * Prateleira 2 (Superior-Média): Cheia e bem organizada com Johnson's Baby, Ramer Sponges, Olaitum Junior Cream e Baby Dove. Observa-se um ligeiro desalinhamento em algumas esponjas penduradas no lado esquerdo.\n   * Prateleira 3 (Média): Cheia e bem organizada com Baby Dove, Simple Baby, Olaitum Daily, Olaitum Junior Cream e Johnson's Baby Naturals. Há uma embalagem roxa tombada/mal posicionada no centro, atrás de outros produtos.\n   * Prateleira 4 (Inferior-Média): Cheia e bem organizada com Baby Dove, Tommee Tippee, Braun, Nurofen, Calpol, Bonjela e Dentinox.\n   * Prateleira 5 (Inferior): Cheia e bem organizada com Metanium Everyday, BabyRub e Sudocrem.\n   * Prateleira 6 (Mais Inferior): Cheia e bem organizada com Vaseline, Johnson's Baby Powder e Cotton Wool Buds.\n   * Prateleira 7 (Chão/Base): Parcialmente visível, mas parece estar preenchida com caixas de produtos.\n3. IDENTIFICACAO DE ANOMALIAS:\n   * ISS_001: Tipo: `misaligned`, Localização: Prateleira 2, lado esquerdo. Severidade: `low`. Descrição: Algumas esponjas coloridas penduradas estão ligeiramente desalinhadas ou sobrepostas. Área afetada: ~5%.\n   * ISS_002: Tipo: `misaligned`, Localização: Prateleira 3, centro. Severidade: `low`. Descrição: Uma embalagem roxa está tombada ou mal posicionada atrás de outros produtos, com baixa visibilidade. Área afetada: <1%.\n4. CLASSIFICACAO FINAL: O `overall_status` é \"warning\" devido a pequenos problemas de desalinhamento e um produto mal posicionado, que não afetam significativamente a disponibilidade ou a experiência de compra, mas indicam que a organização não é perfeita. O `shelf_fill_rate` é estimado em 0.95, refletindo o alto nível de preenchimento da prateleira.",
+  "_strategy": "B"
+}

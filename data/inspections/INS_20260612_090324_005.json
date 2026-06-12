@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260612_090324_005",
+  "timestamp": "2026-06-12T09:03:24Z",
+  "image_path": "data\\images\\normal\\train_1182.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "air fresheners",
+    "scented candles",
+    "fragrance oils",
+    "tea lights",
+    "diffusers",
+    "scented wax"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho típica, provavelmente de uma drogaria ou supermercado, com 5 níveis de prateleiras visíveis, além de uma área de exposição superior. Os produtos predominantes são ambientadores, velas perfumadas e velas de chá. \n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (área de exposição): Contém conjuntos de ambientadores 'Profissimo Raumduft-Set' (Frischezauber, Magnolie, Lemongras, Pink Grapefruit), 'Frosch Oase Raumerfrischer' e 'Essentials by pay' difusores. Esta zona está cheia e bem organizada, com todos os produtos alinhados e etiquetas de preço visíveis.\n   - Segunda Prateleira (de cima para baixo): Contém produtos de cera perfumada da marca Air Wick. A prateleira está cheia, os produtos estão organizados e as etiquetas de preço estão presentes e legíveis.\n   - Terceira Prateleira (de cima para baixo): Contém velas perfumadas em copos de vidro de várias cores e fragrâncias ('Sweet Flowers', 'Anti-Tabak', 'Meeresrauschen', 'Pfirsich'). A prateleira está cheia, os produtos estão bem dispostos e as etiquetas de preço estão visíveis.\n   - Quarta Prateleira (de cima para baixo): Contém pequenos frascos de óleos perfumados 'Profissimo Duftöl', velas de chá brancas e velas de chá verdes e coloridas. A prateleira está cheia, os produtos estão organizados em pilhas ou caixas e as etiquetas de preço estão presentes.\n   - Quinta Prateleira (de cima para baixo, a mais baixa com produtos): Contém caixas de velas de chá 'Profissimo Teelichte'. Esta prateleira está completamente cheia, com as caixas bem empilhadas e as etiquetas de preço visíveis.\n   - Área inferior (nível do chão): Não contém produtos, apenas a base da prateleira e o chão.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas em nenhuma das zonas. Todas as prateleiras estão bem abastecidas, organizadas, e os produtos estão alinhados. Não há prateleiras vazias, produtos danificados, desalinhados ou etiquetas em falta.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok', uma vez que não foram detetados problemas relevantes. O shelf_fill_rate global é estimado em 0.95, indicando que a prateleira está quase totalmente abastecida.",
+  "_strategy": "B"
+}

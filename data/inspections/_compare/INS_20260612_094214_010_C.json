@@ -1,0 +1,15 @@
+{
+  "inspection_id": "INS_20260612_094214_010",
+  "timestamp": "2026-06-12T09:42:14Z",
+  "image_path": "data/images/empty/train_1041.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "sabonetes",
+    "produtos de cuidado da pele"
+  ],
+  "model_reasoning": "A prateleira esta bem preenchida e organizada. A maioria dos produtos estao alinhados e nas suas posicoes corretas. Nao foram detetados produtos danificados, fora de lugar ou etiquetas em falta. Existe uma pequena zona vazia na prateleira superior direita, mas esta e insignificante e nao afeta o estado geral da prateleira. Por isso, o estado geral e 'ok'.",
+  "_strategy": "C"
+}

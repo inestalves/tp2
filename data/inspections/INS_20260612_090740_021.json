@@ -1,0 +1,19 @@
+{
+  "inspection_id": "INS_20260612_090740_021",
+  "timestamp": "2026-06-12T09:07:40Z",
+  "image_path": "data\\images\\normal\\train_1950.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "sunscreen spray",
+    "sunscreen lotion",
+    "body lotion",
+    "moisturizer",
+    "after-sun care",
+    "insect repellent"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma secção de prateleiras de retalho, provavelmente num supermercado ou farmácia, dedicada a produtos de proteção solar e cuidados com a pele. Existem 4 níveis de prateleiras visíveis, mais uma secção inferior ao nível do chão. Os produtos predominantes são protetores solares em spray e loção de várias marcas (Coppertone, Banana Boat, Up & Up, Neutrogena) e alguns hidratantes (Up & Up, Aveeno).\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior: Completamente cheia e bem organizada com protetores solares em spray de embalagens azuis e roxas. Os produtos estão alinhados e virados para a frente.\n   - Prateleira Intermedia Superior: Muito bem abastecida e organizada com protetores solares em spray e loção, predominantemente em embalagens laranja, azuis e amarelas. As etiquetas de preço 'Priced right daily' estão visíveis e os produtos estão alinhados.\n   - Prateleira Intermedia Inferior: Cheia e organizada com uma mistura de hidratantes e protetores solares em spray. As embalagens são maioritariamente brancas, verdes e laranja. Os produtos estão bem alinhados e virados para a frente, com etiquetas de preço visíveis.\n   - Prateleira Inferior: Bem abastecida e organizada com loções e sprays, incluindo produtos de bronzeamento e protetores solares. As embalagens variam entre brancas, castanhas e escuras. Os produtos estão alinhados.\n   - Secção Inferior (chão): Apenas a parte superior dos produtos é visível, mas parece estar adequadamente abastecida com garrafas de loção ou produtos de banho.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Todas as prateleiras estão bem abastecidas, os produtos estão organizados, alinhados e virados para a frente. Não há prateleiras vazias, produtos danificados ou etiquetas em falta de forma notória.\n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok' devido ao excelente nível de preenchimento e organização. O shelf_fill_rate global é estimado em 0.95, pois quase todo o espaço disponível está ocupado por produtos de forma ordenada.",
+  "_strategy": "B"
+}

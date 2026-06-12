@@ -1,0 +1,30 @@
+{
+  "inspection_id": "INS_20260612_090627_015",
+  "timestamp": "2026-06-12T09:06:27Z",
+  "image_path": "data\\images\\normal\\train_1742.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, secção centro-direita",
+      "severity": "medium",
+      "description": "Uma secção considerável da prateleira inferior está vazia, com apenas um item isolado e algumas etiquetas de preço visíveis, indicando falta de stock.",
+      "confidence": 0.95,
+      "affected_area_pct": 35.0
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "Pain Relief",
+    "Cold & Flu Remedies",
+    "Allergy Relief",
+    "Topical Pain Relief",
+    "Sore Throat Lozenges",
+    "Vitamins/Supplements",
+    "Personal Care Items"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe uma secção de prateleiras de retalho com seis níveis, predominantemente preenchidos com produtos de saúde e higiene pessoal em caixas e garrafas. A iluminação é adequada, mas a imagem está ligeiramente desfocada. 2. ANALISE ZONA A ZONA: As prateleiras superiores (Nível 1 a Nível 5) estão bem abastecidas e organizadas, com produtos como analgésicos, remédios para constipações, anti-alérgicos e produtos de higiene. A prateleira inferior (Nível 6) apresenta uma secção vazia na zona centro-direita, com apenas um item isolado e etiquetas de preço visíveis, indicando falta de stock. As restantes secções da prateleira inferior estão preenchidas. 3. IDENTIFICACAO DE ANOMALIAS: Foi identificada uma anomalia do tipo 'empty_shelf' na prateleira inferior, secção centro-direita. A severidade é classificada como 'medium' devido à extensão da área vazia, que afeta aproximadamente 35% da área total da prateleira inferior. 4. CLASSIFICACAO FINAL: O 'overall_status' é 'warning' devido à secção vazia na prateleira inferior, que, embora não seja crítica, representa uma falha no reabastecimento. As restantes prateleiras estão bem abastecidas. O 'shelf_fill_rate' global é estimado em 0.90, considerando que 5 das 6 prateleiras estão praticamente cheias e a prateleira inferior está parcialmente vazia.",
+  "_strategy": "B"
+}

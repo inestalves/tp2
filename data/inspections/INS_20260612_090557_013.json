@@ -1,0 +1,17 @@
+{
+  "inspection_id": "INS_20260612_090557_013",
+  "timestamp": "2026-06-12T09:05:57Z",
+  "image_path": "data\\images\\normal\\train_1626.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.97,
+  "products_detected": [
+    "sanitary pads",
+    "period underwear",
+    "hair accessories",
+    "lip balm"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho bem organizada, composta por quatro níveis principais de prateleiras e um expositor lateral vertical. Os produtos predominantes são artigos de higiene feminina (pensos higiénicos, cuecas menstruais) e acessórios para o cabelo, com alguns pequenos produtos de beleza (possivelmente batons labiais) no expositor lateral superior. \n2. ANALISE ZONA A ZONA: \n   - Prateleira Superior: Completamente cheia e organizada com múltiplos pacotes de pensos higiénicos de embalagem rosa/roxa. Não há espaços vazios ou desorganização. \n   - Segunda Prateleira (de cima para baixo): Também está cheia e bem organizada. Contém pensos higiénicos de embalagem rosa/roxa e azul/branca (marca 'hadaomoi'). Um display promocional em forma de estrela está visível à esquerda. Preço '15.80' visível. \n   - Terceira Prateleira (de cima para baixo): Cheia e organizada com pensos higiénicos de embalagem rosa/roxa, azul/branca ('hadaomoi') e preta/azul ('超熟睡420'). Preço '9.80' visível. Um penso higiénico de display grande está pendurado à direita. \n   - Prateleira Inferior: Cheia e organizada com cuecas menstruais de embalagem rosa ('安心裤') e pensos higiénicos de embalagem preta/azul ('超熟睡350'). Preços '23.90' e '18.90' visíveis. \n   - Expositor Lateral (Direita): Totalmente preenchido com pequenos produtos embalados (possivelmente batons labiais) na parte superior e numerosos pacotes de acessórios para o cabelo (elásticos, ganchos) nas seções média e inferior. Todos os produtos estão bem pendurados e organizados. Preços '6.80' e '11.90' visíveis. \n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Todas as prateleiras estão cheias, os produtos estão bem alinhados e organizados, não há produtos danificados visíveis, nem etiquetas em falta de forma crítica. Os displays promocionais estão corretamente posicionados. \n4. CLASSIFICACAO FINAL: O estado geral da prateleira é 'ok' devido à excelente organização, ao elevado nível de preenchimento e à ausência de quaisquer problemas relevantes. A taxa de preenchimento da prateleira é estimada em 0.97, indicando que quase todo o espaço disponível está ocupado por produtos de forma adequada.",
+  "_strategy": "B"
+}

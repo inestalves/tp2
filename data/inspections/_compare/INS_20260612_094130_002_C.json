@@ -1,0 +1,17 @@
+{
+  "inspection_id": "INS_20260612_094130_002",
+  "timestamp": "2026-06-12T09:41:30Z",
+  "image_path": "data/images/normal/train_1002.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "alivio da dor",
+    "alergia",
+    "tosse e constipacao",
+    "cuidados com a pele"
+  ],
+  "model_reasoning": "A prateleira esta bem organizada e preenchida, com produtos alinhados e etiquetas visiveis. Nao foram detetados problemas significativos como produtos fora de lugar, danificados ou prateleiras vazias. O fill rate e elevado, indicando uma boa gestao de stock. Por isso, o estado geral e 'ok'.",
+  "_strategy": "C"
+}

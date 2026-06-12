@@ -1,0 +1,13 @@
+{
+  "inspection_id": "INS_20260612_091135_027",
+  "timestamp": "2026-06-12T09:11:35Z",
+  "image_path": "data\\images\\normal\\train_2151.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "unknown",
+  "issues": [],
+  "shelf_fill_rate": null,
+  "products_detected": [],
+  "model_reasoning": "FALLBACK: nao foi possivel analisar esta imagem. Motivo: Erro na chamada a API: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+  "_fallback": true,
+  "_error": "Erro na chamada a API: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+}

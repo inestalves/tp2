@@ -1,0 +1,33 @@
+{
+  "inspection_id": "INS_20260612_090714_018",
+  "timestamp": "2026-06-12T09:07:14Z",
+  "image_path": "data\\images\\normal\\train_1888.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "prateleira 3, centro",
+      "severity": "low",
+      "description": "Algumas caixas de produtos pequenos na prateleira central estão ligeiramente desalinhadas, criando uma aparência menos uniforme.",
+      "confidence": 0.85,
+      "affected_area_pct": 5.0
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "baby wipes",
+    "baby lotion",
+    "baby shampoo",
+    "baby oil",
+    "baby cream",
+    "baby powder",
+    "diapers",
+    "cotton wool",
+    "baby accessories",
+    "baby medical/care items"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma secção de prateleiras de retalho dedicada a produtos de cuidado para bebés. Existem cinco níveis de prateleiras visíveis, além de um banner promocional no topo com a imagem de um bebé. Os produtos incluem predominantemente loções, champôs, toalhitas, fraldas, pós e outros artigos relacionados para bebés. As prateleiras são brancas e o chão tem um padrão cinzento salpicado.\n2. ANALISE ZONA A ZONA:\n   - Banner/Topo: Um grande banner amarelo e branco com um bebé sorridente e texto parcial ('ISH', 'URE', 'RT', 'PLAY'). Não é uma prateleira de produtos.\n   - Prateleira 1 (Superior): Bem abastecida com garrafas brancas (lavagem/champô para bebé) à esquerda e várias pilhas de toalhitas de bebé (embalagens verdes/azuis) no centro e à direita, juntamente com algumas caixas roxas. A prateleira está cheia e organizada.\n   - Prateleira 2 (Segunda de cima): Garrafas roxas (loção/lavagem para bebé) à esquerda, múltiplas embalagens pequenas de creme/bálsamo para bebé com tampas roxas no centro, e latas vermelhas/rosas (pó/creme para bebé) e caixas roxas à direita. A prateleira está cheia e bem organizada.\n   - Prateleira 3 (Média): Uma garrafa amarela (óleo de bebé Johnson's) e um pacote amarelo à esquerda. No centro e à direita, vários produtos de cuidado/médicos para bebés em caixas e garrafas (ex: Bepanthen, Sudocrem, Vaseline). A prateleira está bem abastecida, mas algumas caixas pequenas no centro estão ligeiramente desalinhadas.\n   - Prateleira 4 (Quarta de cima): Garrafas verdes e rosas (óleo/loção para bebé Johnson's) à esquerda, e garrafas brancas com rótulos azuis (Cetaphil ou similar) no centro e à direita, juntamente com recipientes empilhados de algodão. A prateleira está cheia e organizada.\n   - Prateleira 5 (Inferior): Vários acessórios para bebé (brinquedos, artigos de banho) à esquerda. Garrafas brancas com rótulos roxos (pó/loção para bebé Johnson's) e sacos de algodão no centro e à direita. A prateleira está cheia e organizada.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Prateleira 3, Centro: Algumas das caixas pequenas estão ligeiramente desalinhadas. Classificado como 'misaligned', com severidade 'low' e afetando cerca de 5% da área dessa secção. Não foram detetadas prateleiras vazias, produtos errados, danificados ou etiquetas em falta de forma significativa.\n4. CLASSIFICACAO FINAL:\n   - overall_status: 'warning' devido ao desalinhamento menor de alguns produtos na prateleira 3, embora a maioria da prateleira esteja em excelente estado.\n   - shelf_fill_rate: 0.95, pois as prateleiras estão quase completamente cheias e bem abastecidas.",
+  "_strategy": "B"
+}

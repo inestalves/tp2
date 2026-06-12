@@ -1,0 +1,45 @@
+{
+  "inspection_id": "INS_20260612_094310_014",
+  "timestamp": "2026-06-12T09:43:10Z",
+  "image_path": "data/images/planogram_violation/train_106.jpg",
+  "zone_id": "Z_CMP",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "misaligned",
+      "location": "prateleira superior, lado esquerdo",
+      "severity": "low",
+      "description": "Algumas garrafas de refrigerante estao ligeiramente desalinhadas, saindo da linha frontal da prateleira.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.05
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "empty_shelf",
+      "location": "prateleira intermédia, lado direito",
+      "severity": "low",
+      "description": "Pequeno espaco vazio na prateleira intermédia, lado direito, onde deveriam estar mais produtos.",
+      "confidence": 0.6,
+      "affected_area_pct": 0.03
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "misaligned",
+      "location": "prateleira inferior, lado direito",
+      "severity": "low",
+      "description": "Embalagens de refrigerante na prateleira inferior estao ligeiramente desalinhadas.",
+      "confidence": 0.7,
+      "affected_area_pct": 0.04
+    }
+  ],
+  "shelf_fill_rate": 0.9,
+  "products_detected": [
+    "refrigerantes",
+    "sumos",
+    "agua engarrafada",
+    "cha"
+  ],
+  "model_reasoning": "A prateleira esta bem preenchida na sua maioria, mas existem alguns problemas de desalinhamento em varias prateleiras, especialmente nas garrafas de refrigerante. Ha tambem um pequeno espaco vazio na prateleira intermédia. Estes problemas sao de baixa severidade e nao comprometem significativamente a apresentacao geral, mas justificam um estado de 'warning'.",
+  "_strategy": "C"
+}

@@ -1,23 +1,4 @@
-"""
-Componente 1: Shelf Inspector
-
-Analise visual de imagens de prateleiras com Gemini (modelo multimodal),
-produzindo um JSON estruturado conforme o schema definido em
-prompts/schema.json.
-
-Implementa:
-- Tres estrategias de prompting: A (zero-shot), B (chain-of-thought visual),
-  C (few-shot com exemplos textuais).
-- Cache local de resultados (chave = MD5 da imagem + estrategia + zona).
-- Rate limiting (15 req/min por defeito) com backoff exponencial em erro 429.
-- Fallback gracioso quando a quota diaria e esgotada.
-
-Uso:
-    python src/shelf_inspector.py --image data/images/normal/train_1002.jpg --zone Z_S1 --strategy B
-    python src/shelf_inspector.py --images-dir data/images/normal --zone Z_S1 --strategy B
-"""
 from __future__ import annotations
-
 import argparse
 import hashlib
 import json
@@ -53,10 +34,7 @@ REQUIRED_FIELDS = [
     "issues", "shelf_fill_rate", "products_detected", "model_reasoning",
 ]
 
-
-# --------------------------------------------------------------------------
 # Utilidades de cache
-# --------------------------------------------------------------------------
 
 def md5_of_file(path: Path) -> str:
     h = hashlib.md5()
@@ -88,9 +66,7 @@ def save_to_cache(key: str, record: dict) -> None:
         json.dump(record, f, ensure_ascii=False, indent=2)
 
 
-# --------------------------------------------------------------------------
-# Gestao de quota / rate limiting
-# --------------------------------------------------------------------------
+# rate limiting
 
 class QuotaManager:
     """Controla limites de requests por minuto (RPM) e por dia (RPD)."""
@@ -125,7 +101,6 @@ class QuotaManager:
         return self.daily_remaining() <= 0
 
     def wait_for_rpm_slot(self) -> None:
-        """Bloqueia ate haver um slot livre dentro do limite por minuto."""
         now = time.time()
         recent = [t for t in self.state["recent_request_times"] if now - t < 60]
         if len(recent) >= RPM_LIMIT:
@@ -143,9 +118,7 @@ class QuotaManager:
         self._save_state()
 
 
-# --------------------------------------------------------------------------
-# Construcao de prompts
-# --------------------------------------------------------------------------
+# prompts
 
 def build_prompt(strategy: str) -> str:
     if strategy not in VALID_STRATEGIES:
@@ -160,16 +133,12 @@ def build_prompt(strategy: str) -> str:
     return prompt_template.replace("{schema}", schema_text)
 
 
-# --------------------------------------------------------------------------
 # Chamada ao modelo + parsing
-# --------------------------------------------------------------------------
 
 def extract_json(text: str) -> dict:
-    """Extrai um objeto JSON de uma resposta que pode conter blocos markdown
-    ou texto extra antes/depois do JSON."""
     text = text.strip()
 
-    # Remove blocos de codigo markdown ```json ... ``` ou ``` ... ```
+    # Remove blocos de codigo markdown
     fence_match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", text, re.DOTALL)
     if fence_match:
         text = fence_match.group(1)
@@ -208,12 +177,8 @@ def call_gemini_with_retry(client: genai.Client, prompt: str, image_bytes: bytes
     raise RuntimeError("Numero maximo de tentativas excedido.")
 
 
-# --------------------------------------------------------------------------
 # Inspecao principal
-# --------------------------------------------------------------------------
-
 _inspection_counter = 0
-
 
 def next_inspection_id() -> str:
     global _inspection_counter
@@ -242,12 +207,6 @@ def fallback_record(image_path: str, zone_id: str, reason: str) -> dict:
 def analyze_image(image_path: str, zone_id: str = "Z_UNKNOWN", strategy: str = "B",
                    force: bool = False, client: genai.Client | None = None,
                    quota: QuotaManager | None = None) -> dict:
-    """Analisa uma imagem de prateleira e devolve um inspection record (dict).
-
-    Usa cache em disco (chave = MD5 da imagem + estrategia + zona). Respeita
-    rate limiting (RPM) e quota diaria (RPD), com fallback gracioso se a
-    quota estiver esgotada e nao houver cache.
-    """
     image_path_obj = Path(image_path)
     if not image_path_obj.exists():
         raise FileNotFoundError(f"Imagem nao encontrada: {image_path}")
@@ -302,7 +261,7 @@ def analyze_image(image_path: str, zone_id: str = "Z_UNKNOWN", strategy: str = "
         save_to_cache(key, record)
         return record
 
-    # inspection_id e timestamp sao gerados pelo sistema, nunca pelo modelo
+    # inspection_id e timestamp sao gerados pelo sistema
     record["inspection_id"] = next_inspection_id()
     record["timestamp"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     record["image_path"] = str(image_path)
@@ -317,10 +276,7 @@ def analyze_image(image_path: str, zone_id: str = "Z_UNKNOWN", strategy: str = "
     return record
 
 
-# --------------------------------------------------------------------------
 # CLI
-# --------------------------------------------------------------------------
-
 def main():
     parser = argparse.ArgumentParser(description="Shelf Inspector - analise visual de prateleiras com Gemini")
     parser.add_argument("--image", type=str, help="caminho para uma imagem")
@@ -361,7 +317,7 @@ def main():
         status = record.get("overall_status", "?")
         n_issues = len(record.get("issues", []))
         source = "cache" if record.get("_from_cache") else "API"
-        print(f"  -> status={status}, issues={n_issues}, fonte={source}")
+        print(f"  - status={status}, issues={n_issues}, fonte={source}")
 
         out_path = out_dir / f"{record['inspection_id']}.json"
         with open(out_path, "w", encoding="utf-8") as f:

@@ -1,0 +1,26 @@
+{
+  "inspection_id": "INS_20260612_090612_014",
+  "timestamp": "2026-06-12T09:06:12Z",
+  "image_path": "data\\images\\normal\\train_1670.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, lado esquerdo/centro",
+      "severity": "medium",
+      "description": "Uma secção da prateleira inferior esquerda está visivelmente vazia, com falta de produtos (detergentes).",
+      "confidence": 0.9,
+      "affected_area_pct": 25.0
+    }
+  ],
+  "shelf_fill_rate": 0.88,
+  "products_detected": [
+    "Sanitary pads/Diapers",
+    "Detergents (Tide, OMO)",
+    "Unidentified white packaged items (possibly brushes/baby products)"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe um corredor de prateleiras de retalho, com uma unidade de prateleiras principal à esquerda (6 níveis de produtos mais área superior de caixas) e uma unidade mais estreita à direita (5 níveis de produtos). Os produtos predominantes na unidade esquerda são artigos de higiene pessoal (pensos higiénicos/fraldas) e produtos de limpeza (detergentes Tide e OMO). A unidade da direita exibe itens brancos embalados, possivelmente escovas ou produtos para bebé, e um sinal promocional. 2. ANALISE ZONA A ZONA: Na unidade de prateleiras esquerda, a área superior e as prateleiras 6, 5, 4, 3 e 2 (de cima para baixo) estão bem abastecidas e organizadas com produtos embalados em rosa e roxo. A prateleira 1 (inferior) contém produtos Tide (laranja, roxo) e OMO (azul, verde), mas apresenta uma secção visivelmente vazia na parte central-esquerda. Na unidade de prateleiras direita, todas as 5 prateleiras visíveis estão bem abastecidas com itens brancos embalados, pendurados em ganchos, e um sinal promocional vermelho com '省心价' e '98' está presente. 3. IDENTIFICACAO DE ANOMALIAS: Foi identificada uma anomalia do tipo 'empty_shelf' na prateleira inferior da unidade esquerda, na secção central-esquerda. A severidade é classificada como 'medium', pois a área afetada é significativa (aproximadamente 25% da área de produtos visível nesta prateleira específica), mas não compromete a prateleira inteira. 4. CLASSIFICACAO FINAL: O 'overall_status' é 'warning' devido à presença de uma prateleira parcialmente vazia de severidade média. O 'shelf_fill_rate' global é estimado em 0.88, refletindo que a maioria das prateleiras está bem abastecida, mas há uma falha notável na prateleira inferior.",
+  "_strategy": "B"
+}

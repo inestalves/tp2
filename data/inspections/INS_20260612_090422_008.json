@@ -1,0 +1,27 @@
+{
+  "inspection_id": "INS_20260612_090422_008",
+  "timestamp": "2026-06-12T09:04:22Z",
+  "image_path": "data\\images\\normal\\train_1413.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, lado direito",
+      "severity": "low",
+      "description": "Pequenas secções vazias na prateleira inferior direita, onde deveriam estar sprays de limpeza.",
+      "confidence": 0.95,
+      "affected_area_pct": 5.0
+    }
+  ],
+  "shelf_fill_rate": 0.92,
+  "products_detected": [
+    "air fresheners",
+    "cleaning sprays",
+    "laundry detergents",
+    "fabric softeners"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra uma prateleira de retalho típica de supermercado ou drogaria, com 6 níveis de prateleiras visíveis e produtos também no nível do chão. Os produtos predominantes são ambientadores (sprays, recargas, dispositivos), produtos de limpeza (sprays) e detergentes para a roupa (pods, amaciadores). Muitos produtos são da marca 'Denk mit' e 'Lenor'.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (Nível 6): Bem abastecida e organizada com ambientadores de várias marcas.\n   - Segunda Prateleira (Nível 5): Bem abastecida com detergentes para a roupa e ambientadores.\n   - Terceira Prateleira (Nível 4): Bem abastecida com sprays de limpeza e ambientadores.\n   - Quarta Prateleira (Nível 3): Bem abastecida com sprays de limpeza e ambientadores.\n   - Quinta Prateleira (Nível 2): Bem abastecida com sprays de limpeza e ambientadores.\n   - Prateleira Inferior (Nível 1): O lado esquerdo e central estão bem abastecidos com sprays de limpeza. No lado direito, existem algumas pequenas secções vazias onde deveriam estar mais sprays de limpeza.\n   - Nível do Chão: Bem abastecido com caixas grandes de amaciador de roupa Lenor, empilhadas num palete.\n3. IDENTIFICACAO DE ANOMALIAS:\n   - Anomalia 1: Tipo 'empty_shelf', localizada na prateleira inferior, lado direito. A severidade é 'low' pois são apenas pequenas falhas no stock, não uma secção completamente vazia. A descrição é 'Pequenas secções vazias na prateleira inferior direita, onde deveriam estar sprays de limpeza'. A área afetada é estimada em 5% da área total da prateleira inferior.\n4. CLASSIFICACAO FINAL:\n   - overall_status: 'warning', devido às pequenas falhas de stock na prateleira inferior direita. Não é 'critical' pois a maioria das prateleiras está bem abastecida e não há problemas graves. Não é 'ok' devido às lacunas visíveis.\n   - shelf_fill_rate: Estimado em 0.92, refletindo que a grande maioria do espaço está preenchida, com apenas algumas pequenas áreas vazias.",
+  "_strategy": "B"
+}

@@ -1,0 +1,46 @@
+{
+  "inspection_id": "INS_20260612_090841_023",
+  "timestamp": "2026-06-12T09:08:41Z",
+  "image_path": "data\\images\\normal\\train_2057.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "warning",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf",
+      "location": "prateleira inferior, lado esquerdo",
+      "severity": "high",
+      "description": "Uma porção significativa da prateleira inferior no lado esquerdo está vazia, com apenas alguns produtos de sabonete Coast visíveis.",
+      "confidence": 0.95,
+      "affected_area_pct": 80.0
+    },
+    {
+      "issue_id": "ISS_002",
+      "type": "misaligned",
+      "location": "prateleira 4, lado esquerdo",
+      "severity": "low",
+      "description": "Algumas caixas de sabonete Irish Spring estão ligeiramente empurradas para trás e desalinhadas na prateleira.",
+      "confidence": 0.85,
+      "affected_area_pct": 10.0
+    },
+    {
+      "issue_id": "ISS_003",
+      "type": "other",
+      "location": "chão, perto da prateleira inferior esquerda",
+      "severity": "low",
+      "description": "Uma etiqueta de preço está visível no chão, indicando uma pequena desorganização ou queda de material.",
+      "confidence": 0.9,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.95,
+  "products_detected": [
+    "body wash",
+    "shampoo",
+    "bar soap",
+    "bath salts",
+    "children's bath products"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem mostra um corredor de supermercado com seis prateleiras visíveis, predominantemente preenchidas com produtos de banho e corpo, como sabonetes líquidos, shampoos e sabonetes em barra. Um sinal no topo indica 'Bath Soap'.\n2. ANALISE ZONA A ZONA: As prateleiras superiores (1 a 5) estão geralmente bem abastecidas e organizadas, com produtos alinhados e poucas falhas. A prateleira superior contém uma mistura de sabonetes líquidos para adultos e crianças (St. Ives, Alba Botanica, Mr. Bubble, Frozen, Spongebob). A segunda e terceira prateleiras contêm principalmente sabonetes líquidos e géis de banho (Dove, Aveeno, Caress, Dial, Olay, Method), com alguns produtos infantis na segunda prateleira (Paw Patrol, Cars, Peppa Pig). A quarta e quinta prateleiras estão cheias de sabonetes em barra (Irish Spring, Dial, Dove, Tone, Ivory, Caress, Yardley) e sais de banho (Dr. Teal's). A prateleira inferior, no entanto, apresenta uma secção significativamente vazia no lado esquerdo, com apenas algumas caixas de sabonete Coast. O resto da prateleira inferior está bem abastecido.\n3. IDENTIFICACAO DE ANOMALIAS: Foi identificada uma anomalia de 'empty_shelf' na prateleira inferior, lado esquerdo, com severidade alta, afetando aproximadamente 80% dessa secção. Há também uma anomalia de 'misaligned' na prateleira 4, lado esquerdo, onde algumas caixas de Irish Spring estão ligeiramente desalinhadas (severidade baixa, 10% da área afetada). Adicionalmente, uma etiqueta de preço no chão perto da prateleira inferior esquerda foi classificada como 'other' (severidade baixa), indicando uma pequena desorganização.\n4. CLASSIFICACAO FINAL: Com base na análise, o 'overall_status' é 'warning' devido à secção significativamente vazia na prateleira inferior, embora a maioria das outras prateleiras esteja bem abastecida. O 'shelf_fill_rate' global é estimado em 0.95, refletindo a boa ocupação geral, mas com a falha notável na parte inferior.",
+  "_strategy": "B"
+}

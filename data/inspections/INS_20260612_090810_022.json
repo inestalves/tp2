@@ -1,0 +1,22 @@
+{
+  "inspection_id": "INS_20260612_090810_022",
+  "timestamp": "2026-06-12T09:08:10Z",
+  "image_path": "data\\images\\normal\\train_1987.jpg",
+  "zone_id": "Z_S1",
+  "overall_status": "ok",
+  "issues": [],
+  "shelf_fill_rate": 0.98,
+  "products_detected": [
+    "Nivea body care",
+    "Vaseline body care",
+    "Aveeno body care",
+    "Palmer's body care",
+    "E45 body care",
+    "Neutrogena body care",
+    "Atrixo body care",
+    "Astral body care",
+    "Bio-Oil"
+  ],
+  "model_reasoning": "1. DESCRICAO GERAL: A imagem exibe uma secção de prateleiras de retalho dedicada a produtos de 'body care'. Existem 6 prateleiras principais visíveis, além de uma prateleira superior que parece ser usada para armazenamento ou stock extra. Os produtos predominantes são loções corporais, cremes e alguns produtos de banho de marcas como Nivea, Vaseline, Aveeno, Palmer's, E45, Neutrogena, Atrixo, Astral e Bio-Oil.\n2. ANALISE ZONA A ZONA:\n   - Prateleira Superior (acima do sinal 'body care'): Contém alguns frascos e caixas de cartão, parecendo ser uma área de armazenamento ou stock, não uma exposição primária. Não há problemas de organização para esta função.\n   - Prateleira 1 (Nivea In-Shower, Loções): Completamente cheia e muito bem organizada com produtos Nivea In-Shower e várias loções Nivea (Express Hydration, Cherry Blossom, Rose).\n   - Prateleira 2 (Nivea Creams, Vaseline Lotions): Completamente cheia e bem organizada. Contém cremes Nivea (latas azuis) e loções Vaseline Intensive Care (frascos amarelos e verdes).\n   - Prateleira 3 (Vaseline, Aveeno, Palmer's): Completamente cheia e bem organizada. Inclui Vaseline Mature Skin, loções spray Vaseline, vários produtos Aveeno e loções Palmer's Cocoa Butter Formula.\n   - Prateleira 4 (Aveeno, Palmer's, E45, Neutrogena): Completamente cheia e bem organizada. Contém produtos Aveeno, Palmer's Coconut Oil Formula, Neutrogena Deep Moisture e E45 Intense Recovery/Nourish & Restore.\n   - Prateleira 5 (E45, Atrixo, Astral, Bio-Oil): Completamente cheia e bem organizada. Inclui cremes de mãos e loções E45, produtos Atrixo, cremes Astral e caixas de Bio-Oil.\n   - Prateleira 6 (Prateleira Inferior - parcialmente visível): A parte visível está bem preenchida e organizada com produtos Atrixo e Neutrogena.\n3. IDENTIFICACAO DE ANOMALIAS: Não foram identificadas anomalias significativas. Todas as prateleiras de exposição estão muito bem abastecidas, organizadas, e os produtos estão alinhados. Não há produtos danificados, etiquetas em falta ou espaços vazios notáveis. A prateleira superior não é considerada uma área de exposição primária, pelo que o seu conteúdo de armazenamento não constitui uma anomalia.\n4. CLASSIFICACAO FINAL: Com base na análise detalhada, as prateleiras estão em excelente estado. O abastecimento é quase total e a organização é impecável. Não há problemas relevantes que justifiquem um 'warning' ou 'critical' status.",
+  "_strategy": "B"
+}
