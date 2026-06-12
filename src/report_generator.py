@@ -1,28 +1,3 @@
-"""
-Componente 4: Report Generator
-
-Gera relatorios de inspecao em Markdown para uma SESSAO (conjunto de
-inspection records - ex: todas as inspecoes de hoje, ou todas as inspecoes
-de uma zona num periodo), combinando:
-- as regras de deteccao acionadas (rule_engine.py);
-- contexto historico semelhante recuperado do RAG memory (rag_memory.py),
-  com referencia explicita a inspection_id e data;
-- recomendacoes geradas por template a partir dos problemas/regras
-  detetados, ordenadas por urgencia e limitadas a 5 (sem chamadas
-  adicionais ao Gemini, dado o limite de quota documentado).
-
-Estrutura do relatorio (Seccao 7 do enunciado):
-1. Sumario Executivo
-2. Problemas por Zona
-3. Regras Disparadas
-4. Contexto Historico Relevante
-5. Recomendacoes (max. 5, por ordem de urgencia)
-6. Integracao com Projeto 1 (opcional - nao implementado)
-
-Uso:
-    python src/report_generator.py --inspection data/inspections/INS_xxx.json
-    python src/report_generator.py --inspections-dir data/inspections --output data/reports/sessao.md
-"""
 from __future__ import annotations
 
 import argparse
@@ -79,15 +54,14 @@ def _format_pct(value: float | None) -> str:
     return f"{value:.0%}"
 
 
-# --------------------------------------------------------------------------
 # Seccoes
-# --------------------------------------------------------------------------
 
 def _section_executive_summary(records: list[dict]) -> str:
     n_zones = len({r.get("zone_id", "?") for r in records})
     n_critical = sum(1 for r in records if r.get("overall_status") == "critical")
     n_warning = sum(1 for r in records if r.get("overall_status") == "warning")
     n_ok = sum(1 for r in records if r.get("overall_status") == "ok")
+    n_fallback = sum(1 for r in records if r.get("_fallback"))
     n_issues = sum(len(r.get("issues") or []) for r in records)
 
     text = (
@@ -96,6 +70,12 @@ def _section_executive_summary(records: list[dict]) -> str:
         f"{n_warning} em atencao e {n_ok} sem problemas. "
         f"No total foram detetados {n_issues} problema(s) entre todas as inspecoes."
     )
+    if n_fallback:
+        text += (
+            f" Adicionalmente, {n_fallback} inspecao(oes) nao produziram dados "
+            f"validos (falha temporaria na chamada a API) e estao listadas em "
+            f"separado na Seccao 2."
+        )
     return "## 1. Sumario Executivo\n\n" + text
 
 
@@ -108,7 +88,10 @@ def _section_zones(records: list[dict]) -> str:
 
     for zone, recs in sorted(by_zone.items()):
         lines.append(f"### Zona {zone}")
-        for r in sorted(recs, key=lambda x: x.get("timestamp", "")):
+        valid = [r for r in recs if not r.get("_fallback")]
+        fallback = [r for r in recs if r.get("_fallback")]
+
+        for r in sorted(valid, key=lambda x: x.get("timestamp", "")):
             status = STATUS_LABELS.get(r.get("overall_status"), r.get("overall_status"))
             fill = _format_pct(r.get("shelf_fill_rate"))
             date = (r.get("timestamp") or "")[:10] or "N/D"
@@ -126,6 +109,15 @@ def _section_zones(records: list[dict]) -> str:
                     lines.append(f"  - {label} (severidade {sev}, local: {loc}, area afetada: {area})")
             else:
                 lines.append("  - Sem problemas detetados.")
+
+        if fallback:
+            dates = sorted((r.get("timestamp") or "")[:10] for r in fallback)
+            ids = ", ".join(f"`{r.get('inspection_id', 'N/D')}`" for r in fallback)
+            date_range = dates[0] if dates[0] == dates[-1] else f"{dates[0]} a {dates[-1]}"
+            lines.append(
+                f"- {len(fallback)} inspecao(oes) sem dados validos ({date_range}, "
+                f"falha temporaria na API): {ids}"
+            )
         lines.append("")
 
     return "\n".join(lines)
@@ -197,6 +189,14 @@ def _section_history(records: list[dict]) -> str:
 def _section_recommendations(records: list[dict], matched_evals: list[dict]) -> str:
     candidates: list[tuple[int, str]] = []
 
+    # Alertas de regras sao colocados primeiro: a sua urgencia (-1 a 1) e
+    # estritamente menor que a das recomendacoes baseadas em issues (0 a 5),
+    # pelo que um alerta "critical" fica sempre acima de qualquer recomendacao
+    # generica do mesmo nivel "0", mesmo com a estabilidade do sorted().
+    for ev in matched_evals:
+        urgency = ALERT_URGENCY.get(ev.get("alert_level"), 3) - 1
+        candidates.append((urgency, f"[{ev['rule_id']}] {ev['notification_message']}"))
+
     for r in records:
         zone = r.get("zone_id", "?")
         for issue in r.get("issues") or []:
@@ -208,10 +208,6 @@ def _section_recommendations(records: list[dict], matched_evals: list[dict]) -> 
         fill = r.get("shelf_fill_rate")
         if fill is not None and fill < 0.7:
             candidates.append((0, f"Planear reposicao de stock na zona {zone} (preenchimento {fill:.0%})."))
-
-    for ev in matched_evals:
-        urgency = ALERT_URGENCY.get(ev.get("alert_level"), 3)
-        candidates.append((urgency, f"[{ev['rule_id']}] {ev['notification_message']}"))
 
     seen: set[str] = set()
     ordered: list[str] = []
@@ -232,23 +228,9 @@ def _section_recommendations(records: list[dict], matched_evals: list[dict]) -> 
     return "\n".join(lines)
 
 
-def _section_integration() -> str:
-    return (
-        "## 6. Integracao com Projeto 1\n\n"
-        "Seccao opcional do enunciado - nao implementada nesta entrega. "
-        "A integracao consistiria em cruzar os inspection records com a "
-        "trajetoria de movimento de clientes do Projeto 1 (ex: tempo de "
-        "permanencia por zona vs. problemas detetados nessa zona)."
-    )
 
-
-# --------------------------------------------------------------------------
 # Geracao do relatorio completo
-# --------------------------------------------------------------------------
-
 def generate_session_report(records: list[dict], title: str = "Relatorio de Inspecao") -> str:
-    """Gera o relatorio Markdown de sessao (6 seccoes) para um conjunto de
-    inspection records."""
     rules = load_rules(active_only=True)
     rules_section, matched_evals = _section_rules(records, rules)
 
@@ -269,8 +251,6 @@ def generate_session_report(records: list[dict], title: str = "Relatorio de Insp
         _section_history(records),
         "",
         _section_recommendations(records, matched_evals),
-        "",
-        _section_integration(),
     ]
     return "\n".join(sections) + "\n"
 
@@ -293,8 +273,6 @@ def generate_report_for_records(records: list[dict], output_path: str | None,
 
 
 def generate_report_for_path(inspection_path: str, output_path: str | None = None) -> str:
-    """Compatibilidade: gera um relatorio de sessao com um unico inspection
-    record."""
     with open(inspection_path, "r", encoding="utf-8") as f:
         record = json.load(f)
 
@@ -306,10 +284,7 @@ def generate_report_for_path(inspection_path: str, output_path: str | None = Non
                                         title=f"Relatorio de Inspecao - {record.get('inspection_id', 'N/D')}")
 
 
-# --------------------------------------------------------------------------
 # CLI
-# --------------------------------------------------------------------------
-
 def main():
     parser = argparse.ArgumentParser(description="Report Generator - relatorios de inspecao em Markdown")
     parser.add_argument("--inspection", type=str, help="caminho para um unico inspection record (.json)")
