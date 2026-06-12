@@ -57,7 +57,7 @@ MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
 VALID_STRATEGIES = ("document", "issue", "hybrid")
 
-# As 4 perguntas de exemplo obrigatorias da Seccao 6.4 do enunciado.
+# 4 perguntas obrigatórias
 OBLIGATORY_QUERIES = [
     "Quando foi a ultima vez que a zona Z_S1 teve problemas de prateleira vazia?",
     "Que zonas tiveram mais issues de planograma nas ultimas 2 semanas?",
@@ -66,13 +66,8 @@ OBLIGATORY_QUERIES = [
 ]
 
 
-# --------------------------------------------------------------------------
-# Carregamento de inspection records
-# --------------------------------------------------------------------------
-
+# carregamento de inspection records
 def load_inspection_records(base_dir: Path | None = None) -> list[dict]:
-    """Carrega todos os inspection records validos (nao-fallback) de
-    data/inspections/ (recursivamente), deduplicados por inspection_id."""
     base_dir = base_dir or INSPECTIONS_DIR
     records: dict[str, dict] = {}
     for path in sorted(base_dir.glob("**/*.json")):
@@ -91,10 +86,7 @@ def load_inspection_records(base_dir: Path | None = None) -> list[dict]:
     return list(records.values())
 
 
-# --------------------------------------------------------------------------
-# Geracao de texto (resumos) - sem chamadas ao Gemini
-# --------------------------------------------------------------------------
-
+# Geracao de texto (sem chamadas ao Gemini)
 def build_record_text(record: dict) -> str:
     status = record.get("overall_status", "unknown")
     zone = record.get("zone_id", "?")
@@ -140,7 +132,7 @@ def build_summary_prompt(record: dict) -> str:
     }, ensure_ascii=False, indent=2)
     return template.replace("{record_json}", record_json)
 
-
+# gerar summary
 def generate_summary_llm(record: dict, client=None) -> str:
     """Gera o "summary" indexado para um record (Seccao 6.2 do enunciado).
 
@@ -233,12 +225,8 @@ def get_chunks(record: dict, strategy: str = "hybrid", summary_mode: str = "temp
     return chunks
 
 
-# --------------------------------------------------------------------------
 # ChromaDB
-# --------------------------------------------------------------------------
-
 _embedding_function = None
-
 
 def get_embedding_function():
     global _embedding_function
@@ -263,10 +251,7 @@ def index_records(strategy: str = "hybrid", records: list[dict] | None = None,
                    llm_client=None) -> tuple["chromadb.Collection", int, int]:
     """Indexa inspection records em ChromaDB usando a estrategia de chunking
     indicada. Devolve (collection, n_records, n_chunks).
-
-    `summary_mode="llm"` gera os resumos dos chunks "document" via LLM
-    (Seccao 6.2); requer `llm_client` (cliente Gemini) e consome quota da
-    API."""
+    """
     client = get_client()
     name = collection_name_for(strategy)
     if reset:
@@ -325,10 +310,7 @@ def query_memory(query_text: str, n_results: int = 3, strategy: str = "hybrid") 
     return sorted(seen.values(), key=lambda r: r["distance"])[:n_results]
 
 
-# --------------------------------------------------------------------------
-# RAG = retrieval + sintese (Seccao 6.4)
-# --------------------------------------------------------------------------
-
+# RAG
 def build_answer_prompt(query_text: str, retrieved: list[dict]) -> str:
     template = (PROMPTS_DIR / "rag_answer.txt").read_text(encoding="utf-8")
     context_lines = []
@@ -406,9 +388,7 @@ def answer_query(query_text: str, k: int = 3, strategy: str = "hybrid", client=N
     }
 
 
-# --------------------------------------------------------------------------
 # Avaliacao Recall@3 das estrategias de chunking
-# --------------------------------------------------------------------------
 
 EVAL_QUERIES = [
     {
@@ -464,9 +444,7 @@ def evaluate_strategies(k: int = 3, strategies: tuple[str, ...] = VALID_STRATEGI
     return results
 
 
-# --------------------------------------------------------------------------
 # CLI
-# --------------------------------------------------------------------------
 
 def main():
     parser = argparse.ArgumentParser(description="RAG Memory - indexacao e pesquisa semantica de inspecoes")
